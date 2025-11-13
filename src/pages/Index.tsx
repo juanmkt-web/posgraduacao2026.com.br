@@ -253,7 +253,7 @@ const Index = () => {
       </section>
 
       {/* Advantages Section - Carousel */}
-      <section id="advantages" className="relative py-20 px-4 overflow-hidden bg-[#0a0f1f]">
+      <section id="advantages" className="relative py-20 px-4 overflow-hidden bg-[030D1A] bg-[#030e1b]">
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
             <p className="text-white/50 text-sm uppercase tracking-[0.3em] mb-4">BENEFÍCIOS & PROMOÇÕES</p>
