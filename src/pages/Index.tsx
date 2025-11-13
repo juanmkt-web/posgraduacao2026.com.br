@@ -237,6 +237,57 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Differentials Section */}
+      <section id="differentials" className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">
+              A combinação certa entre excelência acadêmica e performance profissional
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Estruturamos as jornadas de pós-graduação para que você aprenda com profundidade, 
+              aplique rápido e avance na carreira
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { 
+                icon: Lightbulb, 
+                title: "Aprendizado Ativo", 
+                desc: "Metodologias com laboratórios ao vivo, business cases e simulações" 
+              },
+              { 
+                icon: GraduationCap, 
+                title: "Docentes e Mentores", 
+                desc: "Professores doutores e executivos C-level que conectam teoria e desafios reais" 
+              },
+              { 
+                icon: FolderKanban, 
+                title: "Projeto de Carreira", 
+                desc: "Trilhas personalizadas de empregabilidade e acesso à comunidade" 
+              },
+              { 
+                icon: Trophy, 
+                title: "Reconhecimento", 
+                desc: "Cursos credenciados pelo MEC e alinhados às demandas do setor" 
+              },
+            ].map((item, index) => (
+              <div 
+                key={index} 
+                className="text-center space-y-4 hover-lift"
+              >
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-4">
+                  <item.icon className="h-10 w-10 text-primary animate-float" style={{ animationDelay: `${index * 0.2}s` }} />
+                </div>
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Advantages Section - Carousel */}
       <section id="advantages" className="relative py-20 px-4 overflow-hidden bg-[#0a0f1f]">
         <div className="container mx-auto relative z-10">
@@ -291,57 +342,6 @@ const Index = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Differentials Section */}
-      <section id="differentials" className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              A combinação certa entre excelência acadêmica e performance profissional
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Estruturamos as jornadas de pós-graduação para que você aprenda com profundidade, 
-              aplique rápido e avance na carreira
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { 
-                icon: Lightbulb, 
-                title: "Aprendizado Ativo", 
-                desc: "Metodologias com laboratórios ao vivo, business cases e simulações" 
-              },
-              { 
-                icon: GraduationCap, 
-                title: "Docentes e Mentores", 
-                desc: "Professores doutores e executivos C-level que conectam teoria e desafios reais" 
-              },
-              { 
-                icon: FolderKanban, 
-                title: "Projeto de Carreira", 
-                desc: "Trilhas personalizadas de empregabilidade e acesso à comunidade" 
-              },
-              { 
-                icon: Trophy, 
-                title: "Reconhecimento", 
-                desc: "Cursos credenciados pelo MEC e alinhados às demandas do setor" 
-              },
-            ].map((item, index) => (
-              <div 
-                key={index} 
-                className="text-center space-y-4 hover-lift"
-              >
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-4">
-                  <item.icon className="h-10 w-10 text-primary animate-float" style={{ animationDelay: `${index * 0.2}s` }} />
-                </div>
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="text-muted-foreground">{item.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
