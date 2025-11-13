@@ -235,10 +235,10 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4">
             Vantagens exclusivas na pós-graduação Fasul
           </h2>
-          <p className="text-center text-white/70 text-lg mb-16 max-w-2xl mx-auto">
+          <p className="text-center text-primary/80 text-lg mb-16 max-w-2xl mx-auto">
             Diferenciais que impulsionam sua carreira além do diploma
           </p>
           
@@ -272,8 +272,8 @@ const Index = () => {
                   <item.icon className="relative h-12 w-12 text-primary group-hover:text-white group-hover:scale-110 transition-all duration-300" />
                 </div>
                 
-                <h3 className="relative text-lg font-bold text-white mb-2 group-hover:text-white transition-colors">{item.title}</h3>
-                <p className="relative text-white/60 group-hover:text-white/80 text-sm transition-colors">{item.desc}</p>
+                <h3 className="relative text-lg font-bold text-primary mb-2 group-hover:text-white transition-colors">{item.title}</h3>
+                <p className="relative text-primary/70 group-hover:text-white/80 text-sm transition-colors">{item.desc}</p>
                 
                 {/* Bottom accent line */}
                 <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
