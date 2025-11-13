@@ -66,6 +66,7 @@ const Index = () => {
         stopOnInteraction: false,
         stopOnMouseEnter: false,
         playOnInit: true,
+        animation: infinite-scroll 10s linear infinite;
       }),
     ],
   );
