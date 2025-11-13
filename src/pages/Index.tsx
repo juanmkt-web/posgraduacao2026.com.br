@@ -107,9 +107,11 @@ const Index = () => {
                 <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
                   Quero avançar agora
                 </Button>
-                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary font-semibold">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary font-semibold" asChild>
+                <a href="https://www.fasuleducacional.edu.br/posgraduacao/cursos" target="_blank" rel="noopener noreferrer">
                   Conhecer os cursos
-                </Button>
+                </a>
+              </Button>
               </div>
 
               {/* Social Proof Stats */}
