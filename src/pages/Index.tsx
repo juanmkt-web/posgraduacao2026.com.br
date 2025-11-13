@@ -508,45 +508,44 @@ const Index = () => {
             </div>
 
             <div className="md:col-span-3">
-              <Card className="relative p-8 shadow-xl overflow-hidden bg-[#0d213a] border-none">
+              <Card className="relative p-8 shadow-xl overflow-hidden bg-muted/30 border border-border">
                 <div className="space-y-6">
-                  {/* Header with icon */}
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="text-accent text-3xl">🎁</div>
-                    <h3 className="text-2xl font-bold text-white">Bônus Exclusivos Desta Campanha</h3>
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-bold">Bônus Exclusivos Desta Campanha</h3>
                   </div>
 
                   {/* Benefits List */}
                   <div className="space-y-4 mb-6">
                     <div className="flex items-start gap-3">
-                      <div className="text-accent text-2xl mt-1">✈️</div>
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="text-white font-bold text-lg">+10 Cursos de IA</h4>
-                        <p className="text-white/70 text-sm">Aprenda as principais ferramentas de Inteligência Artificial</p>
+                        <h4 className="font-bold text-lg">+10 Cursos de IA</h4>
+                        <p className="text-muted-foreground text-sm">Aprenda as principais ferramentas de Inteligência Artificial</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="text-accent text-2xl mt-1">🏅</div>
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="text-white font-bold text-lg">+2 Pós-Graduações grátis</h4>
-                        <p className="text-white/70 text-sm">Continue sua especialização sem custos adicionais</p>
+                        <h4 className="font-bold text-lg">+2 Pós-Graduações grátis</h4>
+                        <p className="text-muted-foreground text-sm">Continue sua especialização sem custos adicionais</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="text-accent text-2xl mt-1">⚡</div>
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="text-white font-bold text-lg">Acesso ilimitado ao laboratório de IAs premium</h4>
-                        <p className="text-white/70 text-sm">Ferramentas profissionais à sua disposição</p>
+                        <h4 className="font-bold text-lg">Acesso ilimitado ao laboratório de IAs premium</h4>
+                        <p className="text-muted-foreground text-sm">Ferramentas profissionais à sua disposição</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="text-accent text-2xl mt-1">✓</div>
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="text-white font-bold text-lg">Certificação intermediária por semestre</h4>
-                        <p className="text-white/70 text-sm">Valorize seu currículo desde o primeiro semestre</p>
+                        <h4 className="font-bold text-lg">Certificação intermediária por semestre</h4>
+                        <p className="text-muted-foreground text-sm">Valorize seu currículo desde o primeiro semestre</p>
                       </div>
                     </div>
                   </div>
@@ -560,14 +559,14 @@ const Index = () => {
 
                   {/* Financing Info */}
                   <div className="mb-6">
-                    <h4 className="text-white font-bold text-lg mb-2">Bolsas e Financiamentos: PROUNI, FIES, Parcelamento FASUL</h4>
-                    <p className="text-white/70 text-sm">Diversas opções de financiamento e bolsas disponíveis. Consulte nossas condições especiais.</p>
+                    <h4 className="font-bold text-lg mb-2">Bolsas e Financiamentos: PROUNI, FIES, Parcelamento FASUL</h4>
+                    <p className="text-muted-foreground text-sm">Diversas opções de financiamento e bolsas disponíveis. Consulte nossas condições especiais.</p>
                   </div>
 
                   {/* CTA Button */}
                   <Button 
                     size="lg" 
-                    className="w-full bg-accent hover:bg-accent/90 text-[#0d213a] font-bold text-lg py-6 hover:scale-105 transition-all duration-300"
+                    className="w-full bg-[#0c213b] hover:bg-[#0c213b]/90 text-white font-bold text-lg py-6 hover:scale-105 transition-all duration-300"
                     asChild
                   >
                     <a href="https://www.fasuleducacional.edu.br/#anchor_pos" target="_blank" rel="noopener noreferrer">
