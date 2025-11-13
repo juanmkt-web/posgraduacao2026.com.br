@@ -74,8 +74,8 @@ const Index = () => {
       {/* Hero Section */}
       <section className="gradient-hero pt-32 pb-20 px-4 relative overflow-hidden">
         {/* Meteors effect */}
-        <div className="absolute inset-0 opacity-30">
-          <Meteors number={30} />
+        <div className="absolute inset-0 opacity-50">
+          <Meteors number={50} />
         </div>
         
         {/* Animated particles effect */}
