@@ -458,7 +458,7 @@ const Index = () => {
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-bold text-lg">+2 Pós-Graduações grátis</h4>
+                        <h4 className="font-bold text-lg">+3 Pós-Graduações grátis</h4>
                         <p className="text-muted-foreground text-sm">
                           Continue sua especialização sem custos adicionais
                         </p>
