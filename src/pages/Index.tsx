@@ -162,7 +162,7 @@ const Index = () => {
 
                   <div className="py-4">
                     <p className="text-muted-foreground text-base mb-2">A partir de 12x de</p>
-                    <p className="text-primary mb-2 font-sans font-extrabold text-8xl">R$66</p>
+                    <p className="mb-2 font-sans font-extrabold text-[0C2039] text-[#0b1f37]">R$66</p>
                     <p className="text-muted-foreground text-base">mensais*</p>
                   </div>
 
@@ -181,7 +181,7 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-white" size="lg">
+                  <Button size="lg" className="w-full text-white bg-[0C2039] bg-[#0c213b]">
                     Ver condições
                   </Button>
                 </div>
