@@ -389,7 +389,7 @@ const Index = () => {
               <div className="space-y-3">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                  <p>Atendimento humano responde em menos de 5 minutos</p>
+                  <p>Atendimento rápido e humanizado  </p>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
