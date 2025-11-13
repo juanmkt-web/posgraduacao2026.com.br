@@ -175,7 +175,7 @@ const Index = () => {
                     </div>
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <p className="text-sm">​Faça no seu horário e  de onde estiver</p>
+                      <p className="text-sm">Matrícula grátis    </p>
                     </div>
                   </div>
 
