@@ -167,7 +167,7 @@ const Index = () => {
                   <div className="space-y-3 text-left pt-2">
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <p className="text-sm">Mentoria executiva e experiências imersivas</p>
+                      <p className="text-sm">​Ganhe mais 3 Pós-Graduações como bônus</p>
                     </div>
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -175,7 +175,7 @@ const Index = () => {
                     </div>
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <p className="text-sm">Aulas ao vivo e on-demand</p>
+                      <p className="text-sm">​Faça no seu horário e  de onde estiver</p>
                     </div>
                   </div>
 
