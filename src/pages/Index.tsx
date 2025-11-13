@@ -61,7 +61,7 @@ const Index = () => {
     },
     [
       Autoplay({
-        delay: 0,
+        delay: 2000,
         stopOnInteraction: false,
         stopOnMouseEnter: false,
         playOnInit: true,
