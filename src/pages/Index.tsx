@@ -106,7 +106,7 @@ const Index = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">Garantir minha bolsa</Button>
+                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8 text-[FFF71A]">Garantir minha bolsa</Button>
                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary font-semibold" asChild>
                   <a href="https://www.fasuleducacional.edu.br/posgraduacao/cursos" target="_blank" rel="noopener noreferrer">
                     Conhecer os cursos
