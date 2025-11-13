@@ -103,8 +103,8 @@ const Index = () => {
               </h1>
               
               <p className="text-xl text-white/90 leading-relaxed">
-                Programas premium com mentores executivos, laboratórios ao vivo e projetos aplicados 
-                para você liderar a próxima fase da sua carreira.
+                Junte-se aos +35 mil profissionais que avançaram na carreira. 87% dos nossos alunos
+são promovidos em até 12 meses após a conclusão.
               </p>
               
               <div className="flex flex-wrap gap-4">
