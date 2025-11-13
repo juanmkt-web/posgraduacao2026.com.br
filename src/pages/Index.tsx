@@ -508,116 +508,73 @@ const Index = () => {
             </div>
 
             <div className="md:col-span-3">
-              <Card className="relative p-8 shadow-xl overflow-hidden">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Input
-                      placeholder="Nome completo"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          name: e.target.value,
-                        })
-                      }
-                      required
-                    />
+              <Card className="relative p-8 shadow-xl overflow-hidden bg-[#0d213a] border-none">
+                <div className="space-y-6">
+                  {/* Header with icon */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="text-accent text-3xl">🎁</div>
+                    <h3 className="text-2xl font-bold text-white">Bônus Exclusivos Desta Campanha</h3>
                   </div>
 
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="E-mail corporativo"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          email: e.target.value,
-                        })
-                      }
-                      required
-                    />
+                  {/* Benefits List */}
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-start gap-3">
+                      <div className="text-accent text-2xl mt-1">✈️</div>
+                      <div>
+                        <h4 className="text-white font-bold text-lg">+10 Cursos de IA</h4>
+                        <p className="text-white/70 text-sm">Aprenda as principais ferramentas de Inteligência Artificial</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="text-accent text-2xl mt-1">🏅</div>
+                      <div>
+                        <h4 className="text-white font-bold text-lg">+2 Pós-Graduações grátis</h4>
+                        <p className="text-white/70 text-sm">Continue sua especialização sem custos adicionais</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="text-accent text-2xl mt-1">⚡</div>
+                      <div>
+                        <h4 className="text-white font-bold text-lg">Acesso ilimitado ao laboratório de IAs premium</h4>
+                        <p className="text-white/70 text-sm">Ferramentas profissionais à sua disposição</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="text-accent text-2xl mt-1">✓</div>
+                      <div>
+                        <h4 className="text-white font-bold text-lg">Certificação intermediária por semestre</h4>
+                        <p className="text-white/70 text-sm">Valorize seu currículo desde o primeiro semestre</p>
+                      </div>
+                    </div>
                   </div>
 
-                  <div>
-                    <Input
-                      type="tel"
-                      placeholder="Telefone / WhatsApp"
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          phone: e.target.value,
-                        })
-                      }
-                      required
-                    />
+                  {/* Price Card */}
+                  <div className="bg-accent rounded-lg p-6 text-center my-6">
+                    <p className="text-[#0d213a] text-sm font-semibold mb-2">A partir de</p>
+                    <p className="text-[#0d213a] text-5xl font-extrabold mb-2">R$ 89/mês</p>
+                    <p className="text-[#0d213a] text-sm font-semibold">Apenas R$ 3,30 por dia</p>
                   </div>
 
-                  <div>
-                    <Select
-                      value={formData.area}
-                      onValueChange={(value) =>
-                        setFormData({
-                          ...formData,
-                          area: value,
-                        })
-                      }
-                    >
-                      <SelectTrigger>
-                        <SelectValue placeholder="Área de interesse" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="mba-gestao">MBA em Gestão</SelectItem>
-                        <SelectItem value="mba-ti">MBA em TI</SelectItem>
-                        <SelectItem value="pos-financas">Pós em Finanças</SelectItem>
-                        <SelectItem value="pos-marketing">Pós em Marketing</SelectItem>
-                        <SelectItem value="outro">Outro</SelectItem>
-                      </SelectContent>
-                    </Select>
+                  {/* Financing Info */}
+                  <div className="mb-6">
+                    <h4 className="text-white font-bold text-lg mb-2">Bolsas e Financiamentos: PROUNI, FIES, Parcelamento FASUL</h4>
+                    <p className="text-white/70 text-sm">Diversas opções de financiamento e bolsas disponíveis. Consulte nossas condições especiais.</p>
                   </div>
 
-                  <div>
-                    <Textarea
-                      placeholder="Qual seu principal objetivo profissional?"
-                      value={formData.objective}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          objective: e.target.value,
-                        })
-                      }
-                      rows={4}
-                    />
-                  </div>
-
-                  <div className="flex items-start space-x-2">
-                    <Checkbox
-                      id="consent"
-                      checked={formData.consent}
-                      onCheckedChange={(checked) =>
-                        setFormData({
-                          ...formData,
-                          consent: checked as boolean,
-                        })
-                      }
-                    />
-                    <label
-                      htmlFor="consent"
-                      className="text-sm text-muted-foreground leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Aceito receber comunicações sobre cursos, eventos e conteúdos educacionais
-                    </label>
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full bg-[0C2039] bg-[#0c213b]">
-                    Quero falar com um consultor
+                  {/* CTA Button */}
+                  <Button 
+                    size="lg" 
+                    className="w-full bg-accent hover:bg-accent/90 text-[#0d213a] font-bold text-lg py-6 hover:scale-105 transition-all duration-300"
+                    asChild
+                  >
+                    <a href="https://www.fasuleducacional.edu.br/#anchor_pos" target="_blank" rel="noopener noreferrer">
+                      QUERO MINHA BOLSA
+                    </a>
                   </Button>
-
-                  <p className="text-xs text-center text-muted-foreground">
-                    Seus dados estão protegidos. Entraremos em contato em até 24h.
-                  </p>
-                </form>
+                </div>
                 <BorderBeam size={250} duration={12} borderWidth={1.5} />
               </Card>
             </div>
