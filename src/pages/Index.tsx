@@ -562,67 +562,81 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl font-bold text-center mb-4">
-            Tudo o que você precisa saber para decidir com confiança
-          </h2>
-          
-          <Accordion type="single" collapsible className="space-y-4 mt-12">
-            <AccordionItem value="item-1" className="bg-card border rounded-lg px-6">
-              <AccordionTrigger className="hover:no-underline">
-                Os cursos são reconhecidos pelo MEC?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Sim, todos os nossos programas de pós-graduação são credenciados pelo MEC e seguem as 
-                diretrizes do Conselho Nacional de Educação. Você receberá um diploma reconhecido em 
-                todo território nacional.
-              </AccordionContent>
-            </AccordionItem>
+      <section id="faq" className="py-20 px-4 bg-background">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-5 gap-12 items-start">
+            {/* Left Column - Title */}
+            <div className="md:col-span-2 space-y-4">
+              <div className="inline-block">
+                <span className="text-primary text-sm font-semibold uppercase tracking-wide">Perguntas frequentes</span>
+              </div>
+              <h2 className="text-4xl font-bold leading-tight">
+                Tudo o que você precisa saber para decidir com confiança.
+              </h2>
+              <p className="text-muted-foreground">
+                Caso sua pergunta não esteja aqui, nossa equipe educacional está pronta para ajudar.
+              </p>
+            </div>
             
-            <AccordionItem value="item-2" className="bg-card border rounded-lg px-6">
-              <AccordionTrigger className="hover:no-underline">
-                Como funcionam as aulas e encontros ao vivo?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                As aulas são 100% online, com sessões ao vivo semanais e conteúdos gravados disponíveis 
-                na plataforma 24/7. Você escolhe quando estudar, mas tem compromissos com laboratórios 
-                práticos e mentorias agendadas.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-3" className="bg-card border rounded-lg px-6">
-              <AccordionTrigger className="hover:no-underline">
-                Há suporte para networking e carreira?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Sim! Oferecemos acesso ao Career Lab, comunidade Alumni exclusiva, eventos presenciais 
-                de networking e conexão com mais de 210 empresas parceiras que buscam talentos qualificados.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-4" className="bg-card border rounded-lg px-6">
-              <AccordionTrigger className="hover:no-underline">
-                Posso conciliar com a rotina de trabalho?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Absolutamente. Nossa metodologia foi desenhada para profissionais em atividade. Com aulas 
-                gravadas, encontros ao vivo à noite e aos finais de semana, você consegue equilibrar 
-                trabalho, estudo e vida pessoal.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-5" className="bg-card border rounded-lg px-6">
-              <AccordionTrigger className="hover:no-underline">
-                Quais são as formas de pagamento?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Oferecemos parcelamento em até 18x no cartão de crédito, boleto bancário ou PIX. 
-                Além disso, temos condições especiais de bolsa para matrículas antecipadas e programas 
-                de financiamento estudantil.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+            {/* Right Column - Questions */}
+            <div className="md:col-span-3">
+              <Accordion type="single" collapsible className="space-y-3">
+                <AccordionItem value="item-1" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                  <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
+                    Os cursos são reconhecidos pelo MEC?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5">
+                    Sim, todos os nossos programas de pós-graduação são credenciados pelo MEC e seguem as 
+                    diretrizes do Conselho Nacional de Educação. Você receberá um diploma reconhecido em 
+                    todo território nacional.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-2" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                  <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
+                    Como funcionam as aulas e encontros ao vivo?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5">
+                    As aulas são 100% online, com sessões ao vivo semanais e conteúdos gravados disponíveis 
+                    na plataforma 24/7. Você escolhe quando estudar, mas tem compromissos com laboratórios 
+                    práticos e mentorias agendadas.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-3" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                  <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
+                    Há suporte para networking e carreira?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5">
+                    Sim! Oferecemos acesso ao Career Lab, comunidade Alumni exclusiva, eventos presenciais 
+                    de networking e conexão com mais de 210 empresas parceiras que buscam talentos qualificados.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-4" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                  <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
+                    Posso conciliar com a rotina de trabalho?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5">
+                    Absolutamente. Nossa metodologia foi desenhada para profissionais em atividade. Com aulas 
+                    gravadas, encontros ao vivo à noite e aos finais de semana, você consegue equilibrar 
+                    trabalho, estudo e vida pessoal.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-5" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                  <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
+                    Quais são as formas de pagamento?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5">
+                    Oferecemos parcelamento em até 18x no cartão de crédito, boleto bancário ou PIX. 
+                    Além disso, temos condições especiais de bolsa para matrículas antecipadas e programas 
+                    de financiamento estudantil.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
         </div>
       </section>
 
