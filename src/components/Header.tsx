@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
-
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -13,21 +11,23 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const navItems = [
-    { label: "Por que Fasul", href: "#advantages" },
-    { label: "Nossos Cursos", href: "#differentials" },
-    { label: "Vantagens", href: "#advantages" },
-    { label: "Depoimentos", href: "#social-proof" },
-    { label: "FAQ", href: "#faq" },
-  ];
-
-  return (
-    <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-primary shadow-lg" : "bg-primary/95 backdrop-blur-sm"
-      }`}
-    >
+  const navItems = [{
+    label: "Por que Fasul",
+    href: "#advantages"
+  }, {
+    label: "Nossos Cursos",
+    href: "#differentials"
+  }, {
+    label: "Vantagens",
+    href: "#advantages"
+  }, {
+    label: "Depoimentos",
+    href: "#social-proof"
+  }, {
+    label: "FAQ",
+    href: "#faq"
+  }];
+  return <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-primary shadow-lg" : "bg-primary/95 backdrop-blur-sm"}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -37,51 +37,32 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-white/90 hover:text-white transition-colors text-sm font-medium"
-              >
+            {navItems.map(item => <a key={item.href} href={item.href} className="text-white/90 hover:text-white transition-colors text-sm font-medium">
                 {item.label}
-              </a>
-            ))}
+              </a>)}
           </nav>
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-4">
             <a href="tel:08001234567" className="flex items-center gap-2 text-white/90 hover:text-white transition-colors">
-              <Phone className="h-4 w-4" />
-              <span className="font-semibold">0800 123 456</span>
+              
+              
             </a>
-            <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
-              Falar com consultor
-            </Button>
+            <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">​Garantir minha bolsa</Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
+          <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/20">
+        {isMobileMenuOpen && <div className="md:hidden py-4 border-t border-white/20">
             <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-white/90 hover:text-white transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
+              {navItems.map(item => <a key={item.href} href={item.href} className="text-white/90 hover:text-white transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                   {item.label}
-                </a>
-              ))}
+                </a>)}
               <a href="tel:08001234567" className="flex items-center gap-2 text-white/90 hover:text-white transition-colors">
                 <Phone className="h-4 w-4" />
                 <span className="font-semibold">0800 123 456</span>
@@ -90,9 +71,7 @@ export const Header = () => {
                 Falar com consultor
               </Button>
             </nav>
-          </div>
-        )}
+          </div>}
       </div>
-    </header>
-  );
+    </header>;
 };
