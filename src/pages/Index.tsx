@@ -6,7 +6,33 @@ import { Textarea } from "@/components/ui/textarea";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { CountUp } from "@/components/CountUpStats";
 import { LiveFeed } from "@/components/LiveFeed";
-import { TrendingUp, PieChart, BarChart3, Sparkles, Brain, Briefcase, Award, Users, Clock, Video, BookOpen, Target, Lightbulb, GraduationCap, FolderKanban, Trophy, ChevronDown, CheckCircle2, Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import {
+  TrendingUp,
+  PieChart,
+  BarChart3,
+  Sparkles,
+  Brain,
+  Briefcase,
+  Award,
+  Users,
+  Clock,
+  Video,
+  BookOpen,
+  Target,
+  Lightbulb,
+  GraduationCap,
+  FolderKanban,
+  Trophy,
+  ChevronDown,
+  CheckCircle2,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+} from "lucide-react";
 import { Meteors } from "@/components/ui/meteors";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -17,26 +43,29 @@ import { useToast } from "@/hooks/use-toast";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 const Index = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     area: "",
     objective: "",
-    consent: false
+    consent: false,
   });
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    dragFree: false
-  }, [Autoplay({
-    delay: 2500,
-    stopOnInteraction: false,
-    stopOnMouseEnter: false
-  })]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      dragFree: false,
+    },
+    [
+      Autoplay({
+        delay: 2500,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false,
+      }),
+    ],
+  );
 
   // Set countdown to 2 days from now
   const countdownDate = new Date();
@@ -47,13 +76,13 @@ const Index = () => {
       toast({
         title: "Consentimento necessário",
         description: "Por favor, aceite receber comunicações para continuar.",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
     toast({
       title: "Formulário enviado!",
-      description: "Entraremos em contato em até 24 horas."
+      description: "Entraremos em contato em até 24 horas.",
     });
 
     // Reset form
@@ -63,10 +92,11 @@ const Index = () => {
       phone: "",
       area: "",
       objective: "",
-      consent: false
+      consent: false,
     });
   };
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Header />
 
       {/* Hero Section */}
@@ -80,12 +110,18 @@ const Index = () => {
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-2 h-2 bg-white rounded-full animate-pulse-soft" />
           <div className="absolute top-40 right-20 w-3 h-3 bg-accent rounded-full animate-float" />
-          <div className="absolute bottom-40 left-1/4 w-2 h-2 bg-white rounded-full animate-pulse-soft" style={{
-          animationDelay: "1s"
-        }} />
-          <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-accent rounded-full animate-float" style={{
-          animationDelay: "2s"
-        }} />
+          <div
+            className="absolute bottom-40 left-1/4 w-2 h-2 bg-white rounded-full animate-pulse-soft"
+            style={{
+              animationDelay: "1s",
+            }}
+          />
+          <div
+            className="absolute top-1/3 right-1/3 w-2 h-2 bg-accent rounded-full animate-float"
+            style={{
+              animationDelay: "2s",
+            }}
+          />
         </div>
 
         <div className="container mx-auto relative z-10">
@@ -100,18 +136,29 @@ const Index = () => {
                 Transforme sua expertise em liderança e performance profissional
               </h1>
 
-              <p className="text-xl text-white/90 leading-relaxed">Junte-se aos +35 mil profissionais que avançaram na carreira. 
-87% dos nossos alunos são promovidos em até 12 meses após a conclusão.</p>
+              <p className="text-xl text-white/90 leading-relaxed">
+                Junte-se aos +35 mil profissionais que avançaram na carreira.  87% dos nossos alunos são promovidos em
+                até 12 meses após a conclusão.
+              </p>
 
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
                   Quero avançar agora
                 </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary font-semibold" asChild>
-                <a href="https://www.fasuleducacional.edu.br/posgraduacao/cursos" target="_blank" rel="noopener noreferrer">
-                  Conhecer os cursos
-                </a>
-              </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-transparent border-white text-white hover:bg-white hover:text-primary font-semibold"
+                  asChild
+                >
+                  <a
+                    href="https://www.fasuleducacional.edu.br/posgraduacao/cursos"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Conhecer os cursos
+                  </a>
+                </Button>
               </div>
 
               {/* Social Proof Stats */}
@@ -195,7 +242,9 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
               <h2 className="text-3xl font-bold text-white mb-2">Incentivos exclusivos para a nova turma</h2>
-              <p className="text-white/80 mb-1 font-normal text-base">Aproveite benefícios como +3 cursos bônus de IA e até 70% OFF.*</p>
+              <p className="text-white/80 mb-1 font-normal text-base">
+                Aproveite benefícios como +3 cursos bônus de IA e até 70% OFF.*
+              </p>
               <p className="text-accent font-bold text-lg">VAGAS LIMITADAS</p>
             </div>
 
@@ -221,31 +270,41 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[{
-            icon: Lightbulb,
-            title: "Aprendizado Ativo",
-            desc: "Metodologias com laboratórios ao vivo, business cases e simulações"
-          }, {
-            icon: GraduationCap,
-            title: "Docentes e Mentores",
-            desc: "Professores doutores e executivos C-level que conectam teoria e desafios reais"
-          }, {
-            icon: FolderKanban,
-            title: "Projeto de Carreira",
-            desc: "Trilhas personalizadas de empregabilidade e acesso à comunidade"
-          }, {
-            icon: Trophy,
-            title: "Reconhecimento",
-            desc: "Cursos credenciados pelo MEC e alinhados às demandas do setor"
-          }].map((item, index) => <div key={index} className="text-center space-y-4 hover-lift">
+            {[
+              {
+                icon: Lightbulb,
+                title: "Aprendizado Ativo",
+                desc: "Conteúdo criado voltado para o mercado.",
+              },
+              {
+                icon: GraduationCap,
+                title: "Docentes e Mentores",
+                desc: "Professores mestres e doutores",
+              },
+              {
+                icon: FolderKanban,
+                title: "Projeto de Carreira",
+                desc: "Trilhas personalizadas para seu desenvolvimento",
+              },
+              {
+                icon: Trophy,
+                title: "Reconhecimento",
+                desc: "Cursos credenciados pelo MEC e alinhados às demandas do setor",
+              },
+            ].map((item, index) => (
+              <div key={index} className="text-center space-y-4 hover-lift">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-4">
-                  <item.icon className="h-10 w-10 text-primary animate-float" style={{
-                animationDelay: `${index * 0.2}s`
-              }} />
+                  <item.icon
+                    className="h-10 w-10 text-primary animate-float"
+                    style={{
+                      animationDelay: `${index * 0.2}s`,
+                    }}
+                  />
                 </div>
                 <h3 className="text-xl font-bold">{item.title}</h3>
                 <p className="text-muted-foreground">{item.desc}</p>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -263,42 +322,56 @@ const Index = () => {
             {/* Embla Carousel */}
             <div className="overflow-hidden px-4 md:px-0" ref={emblaRef}>
               <div className="flex gap-6">
-                {[{
-                title: "Conclua em 3 meses",
-                desc: "PROGRAMAS INTENSIVOS COM MENTORIAS SEMANAIS",
-                borderColor: "border-l-[#ff8c42]"
-              }, {
-                title: "+10 cursos de IA inclusos",
-                desc: "ESPECIALIZE-SE EM INTELIGÊNCIA ARTIFICIAL APLICADA",
-                borderColor: "border-l-[#ff4d8f]"
-              }, {
-                title: "Projetos com empresas",
-                desc: "DESAFIOS REAIS COM MERCADO (LIVT, B3 E FINSTN)",
-                borderColor: "border-l-[#00d9a3]"
-              }, {
-                title: "Certificação MEC",
-                desc: "DIPLOMA RECONHECIDO NACIONALMENTE",
-                borderColor: "border-l-[#8b5cf6]"
-              }, {
-                title: "Mentoria executiva",
-                desc: "ACOMPANHAMENTO INDIVIDUAL DE CARREIRA",
-                borderColor: "border-l-[#3b82f6]"
-              }, {
-                title: "Networking alumni",
-                desc: "COMUNIDADE ATIVA COM +25 MIL PROFISSIONAIS",
-                borderColor: "border-l-[#0ea5e9]"
-              }, {
-                title: "Aulas ao vivo e on demand",
-                desc: "FLEXIBILIDADE TOTAL PARA A SUA ROTINA",
-                borderColor: "border-l-[#ff8c42]"
-              }, {
-                title: "Bolsa Exclusiva",
-                desc: "ATÉ 70% OFF + 3 PÓS PARA INDICAR",
-                borderColor: "border-l-[#8b5cf6]"
-              }].map((item, index) => <div key={index} className={`relative flex-[0_0_85%] md:flex-[0_0_40%] lg:flex-[0_0_28%] bg-[#1a1f35]/50 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 p-5 group overflow-hidden hover:bg-[#1a1f35]/80 hover:border-white/20 border-l-4 ${item.borderColor}`}>
+                {[
+                  {
+                    title: "Conclua em 3 meses",
+                    desc: "PROGRAMAS INTENSIVOS COM MENTORIAS SEMANAIS",
+                    borderColor: "border-l-[#ff8c42]",
+                  },
+                  {
+                    title: "+10 cursos de IA inclusos",
+                    desc: "ESPECIALIZE-SE EM INTELIGÊNCIA ARTIFICIAL APLICADA",
+                    borderColor: "border-l-[#ff4d8f]",
+                  },
+                  {
+                    title: "Projetos com empresas",
+                    desc: "DESAFIOS REAIS COM MERCADO (LIVT, B3 E FINSTN)",
+                    borderColor: "border-l-[#00d9a3]",
+                  },
+                  {
+                    title: "Certificação MEC",
+                    desc: "DIPLOMA RECONHECIDO NACIONALMENTE",
+                    borderColor: "border-l-[#8b5cf6]",
+                  },
+                  {
+                    title: "Mentoria executiva",
+                    desc: "ACOMPANHAMENTO INDIVIDUAL DE CARREIRA",
+                    borderColor: "border-l-[#3b82f6]",
+                  },
+                  {
+                    title: "Networking alumni",
+                    desc: "COMUNIDADE ATIVA COM +25 MIL PROFISSIONAIS",
+                    borderColor: "border-l-[#0ea5e9]",
+                  },
+                  {
+                    title: "Aulas ao vivo e on demand",
+                    desc: "FLEXIBILIDADE TOTAL PARA A SUA ROTINA",
+                    borderColor: "border-l-[#ff8c42]",
+                  },
+                  {
+                    title: "Bolsa Exclusiva",
+                    desc: "ATÉ 70% OFF + 3 PÓS PARA INDICAR",
+                    borderColor: "border-l-[#8b5cf6]",
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className={`relative flex-[0_0_85%] md:flex-[0_0_40%] lg:flex-[0_0_28%] bg-[#1a1f35]/50 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 p-5 group overflow-hidden hover:bg-[#1a1f35]/80 hover:border-white/20 border-l-4 ${item.borderColor}`}
+                  >
                     <h3 className="text-base font-bold text-white mb-2 uppercase tracking-tight">{item.title}</h3>
                     <p className="text-white/50 text-xs uppercase tracking-wide leading-relaxed">{item.desc}</p>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -435,31 +508,59 @@ const Index = () => {
               <Card className="relative p-8 shadow-xl overflow-hidden">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <Input placeholder="Nome completo" value={formData.name} onChange={e => setFormData({
-                    ...formData,
-                    name: e.target.value
-                  })} required />
+                    <Input
+                      placeholder="Nome completo"
+                      value={formData.name}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          name: e.target.value,
+                        })
+                      }
+                      required
+                    />
                   </div>
 
                   <div>
-                    <Input type="email" placeholder="E-mail corporativo" value={formData.email} onChange={e => setFormData({
-                    ...formData,
-                    email: e.target.value
-                  })} required />
+                    <Input
+                      type="email"
+                      placeholder="E-mail corporativo"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          email: e.target.value,
+                        })
+                      }
+                      required
+                    />
                   </div>
 
                   <div>
-                    <Input type="tel" placeholder="Telefone / WhatsApp" value={formData.phone} onChange={e => setFormData({
-                    ...formData,
-                    phone: e.target.value
-                  })} required />
+                    <Input
+                      type="tel"
+                      placeholder="Telefone / WhatsApp"
+                      value={formData.phone}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          phone: e.target.value,
+                        })
+                      }
+                      required
+                    />
                   </div>
 
                   <div>
-                    <Select value={formData.area} onValueChange={value => setFormData({
-                    ...formData,
-                    area: value
-                  })}>
+                    <Select
+                      value={formData.area}
+                      onValueChange={(value) =>
+                        setFormData({
+                          ...formData,
+                          area: value,
+                        })
+                      }
+                    >
                       <SelectTrigger>
                         <SelectValue placeholder="Área de interesse" />
                       </SelectTrigger>
@@ -474,18 +575,34 @@ const Index = () => {
                   </div>
 
                   <div>
-                    <Textarea placeholder="Qual seu principal objetivo profissional?" value={formData.objective} onChange={e => setFormData({
-                    ...formData,
-                    objective: e.target.value
-                  })} rows={4} />
+                    <Textarea
+                      placeholder="Qual seu principal objetivo profissional?"
+                      value={formData.objective}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          objective: e.target.value,
+                        })
+                      }
+                      rows={4}
+                    />
                   </div>
 
                   <div className="flex items-start space-x-2">
-                    <Checkbox id="consent" checked={formData.consent} onCheckedChange={checked => setFormData({
-                    ...formData,
-                    consent: checked as boolean
-                  })} />
-                    <label htmlFor="consent" className="text-sm text-muted-foreground leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                    <Checkbox
+                      id="consent"
+                      checked={formData.consent}
+                      onCheckedChange={(checked) =>
+                        setFormData({
+                          ...formData,
+                          consent: checked as boolean,
+                        })
+                      }
+                    />
+                    <label
+                      htmlFor="consent"
+                      className="text-sm text-muted-foreground leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
                       Aceito receber comunicações sobre cursos, eventos e conteúdos educacionais
                     </label>
                   </div>
@@ -525,7 +642,10 @@ const Index = () => {
             {/* Right Column - Questions */}
             <div className="md:col-span-3">
               <Accordion type="single" collapsible className="space-y-3">
-                <AccordionItem value="item-1" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                <AccordionItem
+                  value="item-1"
+                  className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors"
+                >
                   <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
                     Os cursos são reconhecidos pelo MEC?
                   </AccordionTrigger>
@@ -535,7 +655,10 @@ const Index = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-2" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                <AccordionItem
+                  value="item-2"
+                  className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors"
+                >
                   <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
                     Como funcionam as aulas e encontros ao vivo?
                   </AccordionTrigger>
@@ -546,7 +669,10 @@ const Index = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-3" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                <AccordionItem
+                  value="item-3"
+                  className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors"
+                >
                   <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
                     Há suporte para networking e carreira?
                   </AccordionTrigger>
@@ -556,7 +682,10 @@ const Index = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-4" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                <AccordionItem
+                  value="item-4"
+                  className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors"
+                >
                   <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
                     Posso conciliar com a rotina de trabalho?
                   </AccordionTrigger>
@@ -567,7 +696,10 @@ const Index = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-5" className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors">
+                <AccordionItem
+                  value="item-5"
+                  className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors"
+                >
                   <AccordionTrigger className="hover:no-underline py-5 text-left font-normal">
                     Quais são as formas de pagamento?
                   </AccordionTrigger>
@@ -675,6 +807,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
 export default Index;
