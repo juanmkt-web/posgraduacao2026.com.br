@@ -11,6 +11,7 @@ import { Meteors } from "@/components/ui/meteors";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import { BorderBeam } from "@/components/ui/border-beam";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import useEmblaCarousel from "embla-carousel-react";
@@ -431,7 +432,7 @@ const Index = () => {
             </div>
 
             <div className="md:col-span-3">
-              <Card className="p-8 shadow-xl">
+              <Card className="relative p-8 shadow-xl overflow-hidden">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Input placeholder="Nome completo" value={formData.name} onChange={e => setFormData({
@@ -497,6 +498,7 @@ const Index = () => {
                     Seus dados estão protegidos. Entraremos em contato em até 24h.
                   </p>
                 </form>
+                <BorderBeam size={250} duration={12} borderWidth={1.5} />
               </Card>
             </div>
           </div>
