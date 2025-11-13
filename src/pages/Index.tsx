@@ -54,16 +54,16 @@ const Index = () => {
   });
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      loop: true, // Essencial para o efeito de esteira infinita
-      align: "start", // Alinha os slides à esquerda
-      dragFree: true, // Permite "arremessar" o carrossel (sensação de esteira)
-      containScroll: true,
+      loop: true,
+      align: "start",
+      dragFree: true,
+      containScroll: false,
     },
     [
       Autoplay({
-        delay: 4500, // **AJUSTADO:** 4.5s. (2s é muito rápido, o usuário não lê).
-        stopOnInteraction: true, // **AJUSTADO:** Deve parar se o usuário arrastar (interagir).
-        stopOnMouseEnter: true, // **VITAL:** Pausa o autoplay quando o mouse está sobre os cards.
+        delay: 2000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false,
         playOnInit: true,
       }),
     ],
