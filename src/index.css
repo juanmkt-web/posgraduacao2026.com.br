@@ -175,4 +175,66 @@ All colors MUST be HSL.
   .hover-scale:hover {
     transform: scale(1.03);
   }
+  
+  /* Marquee Carousel - Infinite Scroll */
+  .marquee-container {
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+  }
+
+  .marquee-content {
+    display: flex;
+    width: max-content;
+    animation: infinite-scroll 20s linear infinite;
+  }
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .card-vantagem {
+    flex-shrink: 0;
+    width: 300px;
+    margin: 0 10px;
+    padding: 20px;
+    background: rgba(26, 31, 53, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    border-top: 2px solid hsl(var(--accent));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .card-vantagem:hover {
+    background: rgba(26, 31, 53, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+  }
 }
