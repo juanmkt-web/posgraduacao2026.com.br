@@ -57,7 +57,7 @@ const Index = () => {
       loop: true, // Essencial para o efeito de esteira infinita
       align: "start", // Alinha os slides à esquerda
       dragFree: true, // Permite "arremessar" o carrossel (sensação de esteira)
-      containScroll: continue,
+      containScroll: true,
     },
     [
       Autoplay({
