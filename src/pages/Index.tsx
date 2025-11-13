@@ -95,8 +95,13 @@ const Index = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-[#fff719] text-[#0c213b] font-semibold px-8 hover:bg-[#ffeb3b] hover:scale-[1.02] hover:shadow-xl transition-all duration-500 ease-out">
-                  Garantir minha bolsa
+                <Button size="lg" className="bg-[#fff719] text-[#0c213b] font-semibold px-8 hover:bg-[#ffeb3b] hover:scale-[1.02] hover:shadow-xl transition-all duration-500 ease-out" asChild>
+                  <a href="#lead-form" onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }}>
+                    Garantir minha bolsa
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary font-semibold" asChild>
                   <a href="https://www.fasuleducacional.edu.br/posgraduacao/cursos" target="_blank" rel="noopener noreferrer">
