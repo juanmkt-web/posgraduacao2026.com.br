@@ -95,7 +95,7 @@ const Index = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="text-accent-foreground font-semibold px-8 text-[FFF71A] bg-[FFF71A] bg-[#fff719] hover:scale-105 hover:shadow-lg transition-all duration-300">
+                <Button size="lg" className="bg-[#fff719] text-[#0c213b] font-semibold px-8 hover:bg-[#ffeb3b] hover:scale-[1.02] hover:shadow-xl transition-all duration-500 ease-out">
                   Garantir minha bolsa
                 </Button>
                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary font-semibold" asChild>
