@@ -57,7 +57,7 @@ const Index = () => {
       loop: true,
       align: "start",
       dragFree: true,
-      containScroll: false,
+      containScroll: true,
     },
     [
       Autoplay({
