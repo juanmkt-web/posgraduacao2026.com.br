@@ -49,6 +49,9 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Index = () => {
   const { toast } = useToast();
@@ -60,6 +63,14 @@ const Index = () => {
     objective: "",
     consent: false,
   });
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "start", dragFree: true },
+    [Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]
+  );
+
+  const scrollPrev = () => emblaApi?.scrollPrev();
+  const scrollNext = () => emblaApi?.scrollNext();
 
   // Set countdown to 2 days from now
   const countdownDate = new Date();
@@ -226,7 +237,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Advantages Section */}
+      {/* Advantages Section - Carousel */}
       <section id="advantages" className="relative py-20 px-4 overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(var(--dark)) 0%, hsl(220, 70%, 10%) 100%)' }}>
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-10">
@@ -235,50 +246,75 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
             Vantagens exclusivas na pós-graduação Fasul
           </h2>
-          <p className="text-center text-primary/80 text-lg mb-16 max-w-2xl mx-auto">
+          <p className="text-center text-white/80 text-lg mb-12 max-w-2xl mx-auto">
             Diferenciais que impulsionam sua carreira além do diploma
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: Clock, title: "Conclua em 3 meses", desc: "Programas intensivos com mentorias", color: "from-primary/20 to-primary/5" },
-              { icon: Brain, title: "+10 Cursos de IA Inclusos", desc: "Especialize-se em Inteligência Artificial Aplicada", color: "from-secondary/20 to-secondary/5" },
-              { icon: Briefcase, title: "Projetos com Empresas", desc: "Desafios reais com mercado (LivT, B3, etc.)", color: "from-primary/20 to-primary/5" },
-              { icon: Award, title: "Certificação MEC", desc: "Diploma reconhecido nacionalmente", color: "from-secondary/20 to-secondary/5" },
-              { icon: Users, title: "Mentoria Executiva", desc: "Acompanhamento individual de carreira", color: "from-primary/20 to-primary/5" },
-              { icon: Sparkles, title: "Networking Alumni", desc: "Comunidade com +35 mil profissionais", color: "from-secondary/20 to-secondary/5" },
-              { icon: Video, title: "Aulas ao vivo e on demand", desc: "Flexibilidade total para sua rotina", color: "from-primary/20 to-primary/5" },
-              { icon: Target, title: "Bolsa Exclusiva", desc: "Até 70% OFF + bônus", color: "from-secondary/20 to-secondary/5" },
-            ].map((item, index) => (
-              <Card 
-                key={index} 
-                className="relative bg-white/5 backdrop-blur-md border-white/10 hover:border-primary/50 transition-all duration-300 p-6 group overflow-hidden hover-lift"
-                style={{ 
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-                }}
-              >
-                {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                
-                {/* Shine effect */}
-                <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:left-full transition-all duration-700 ease-in-out" />
-                
-                {/* Icon with glow */}
-                <div className="relative mb-4">
-                  <div className="absolute inset-0 bg-primary/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <item.icon className="relative h-12 w-12 text-primary group-hover:text-white group-hover:scale-110 transition-all duration-300" />
-                </div>
-                
-                <h3 className="relative text-lg font-bold text-primary mb-2 group-hover:text-white transition-colors">{item.title}</h3>
-                <p className="relative text-primary/70 group-hover:text-white/80 text-sm transition-colors">{item.desc}</p>
-                
-                {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
-              </Card>
-            ))}
+          {/* Carousel Container */}
+          <div className="relative">
+            {/* Navigation Buttons */}
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={scrollPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 hidden md:flex"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+            
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={scrollNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 hidden md:flex"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </Button>
+
+            {/* Embla Carousel */}
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex gap-6">
+                {[
+                  { icon: Clock, title: "Conclua em 3 meses", desc: "Programas intensivos com mentorias semanais", color: "bg-primary" },
+                  { icon: Brain, title: "+10 Cursos de IA Inclusos", desc: "Especialização em Inteligência Artificial Aplicada", color: "bg-secondary" },
+                  { icon: Briefcase, title: "Projetos com Empresas", desc: "Desafios reais com mercado (LivT, B3, etc.)", color: "bg-primary" },
+                  { icon: Award, title: "Certificação MEC", desc: "Diploma reconhecido nacionalmente", color: "bg-secondary" },
+                  { icon: Users, title: "Mentoria Executiva", desc: "Acompanhamento individual de carreira", color: "bg-primary" },
+                  { icon: Sparkles, title: "Networking Alumni", desc: "Comunidade ativa com +35 mil profissionais", color: "bg-secondary" },
+                  { icon: Video, title: "Aulas ao vivo e on demand", desc: "Flexibilidade total para sua rotina", color: "bg-primary" },
+                  { icon: Target, title: "Bolsa Exclusiva", desc: "Até 70% OFF + 3 Pós para indicar", color: "bg-secondary" },
+                ].map((item, index) => (
+                  <Card 
+                    key={index} 
+                    className="relative flex-[0_0_100%] md:flex-[0_0_45%] lg:flex-[0_0_30%] bg-white/5 backdrop-blur-md border-white/10 hover:border-primary/50 transition-all duration-300 p-6 group overflow-hidden min-h-[240px]"
+                    style={{ 
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+                    }}
+                  >
+                    {/* Top colored bar */}
+                    <div className={`absolute top-0 left-0 right-0 h-1 ${item.color}`} />
+                    
+                    {/* Gradient overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br from-${item.color}/20 to-${item.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                    
+                    {/* Shine effect */}
+                    <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:left-full transition-all duration-700 ease-in-out" />
+                    
+                    {/* Icon with glow */}
+                    <div className="relative mb-4">
+                      <div className="absolute inset-0 bg-primary/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <item.icon className="relative h-12 w-12 text-primary group-hover:text-white group-hover:scale-110 transition-all duration-300" />
+                    </div>
+                    
+                    <h3 className="relative text-lg font-bold text-white mb-2">{item.title}</h3>
+                    <p className="relative text-white/70 text-sm">{item.desc}</p>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
