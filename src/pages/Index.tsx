@@ -40,8 +40,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 const Index = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -52,22 +50,6 @@ const Index = () => {
     objective: "",
     consent: false,
   });
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
-      align: "start",
-      dragFree: true,
-      containScroll: true,
-    },
-    [
-      Autoplay({
-        delay: 2000,
-        stopOnInteraction: false,
-        stopOnMouseEnter: false,
-        playOnInit: true,
-      }),
-    ],
-  );
 
   // Set countdown to 2 days from now
   const countdownDate = new Date();
@@ -323,61 +305,40 @@ const Index = () => {
           </div>
 
           {/* Carousel Container */}
-          <div className="relative">
-            {/* Embla Carousel */}
-            <div className="overflow-hidden px-4 md:px-0" ref={emblaRef}>
-              <div className="flex gap-6">
-                {[
-                  {
-                    title: "Conclua em 3 meses",
-                    desc: "AGILIDADE NA CONCLUSÃO E IMPULSIONAMENTO NA CARREIRA",
-                    borderColor: "border-l-[#ff8c42]",
-                  },
-                  {
-                    title: "+10 cursos de IA inclusos",
-                    desc: "ESPECIALIZE-SE EM INTELIGÊNCIA ARTIFICIAL APLICADA",
-                    borderColor: "border-l-[#ff4d8f]",
-                  },
-                  {
-                    title: "Conteúdo voltado para o mercado",
-                    desc: "DESAFIOS REAIS PARA O SEU DESENVOLVIMENTO",
-                    borderColor: "border-l-[#00d9a3]",
-                  },
-                  {
-                    title: "Certificação MEC",
-                    desc: "DIPLOMA RECONHECIDO NACIONALMENTE",
-                    borderColor: "border-l-[#8b5cf6]",
-                  },
-                  {
-                    title: "Trilha especializada",
-                    desc: "CONTEÚDO DESENVOLVIDO PENSANDO NA SUA CARREIRA",
-                    borderColor: "border-l-[#3b82f6]",
-                  },
-                  {
-                    title: "Networking alumni",
-                    desc: "COMUNIDADE ATIVA",
-                    borderColor: "border-l-[#0ea5e9]",
-                  },
-                  {
-                    title: "Aulas on demand",
-                    desc: "FLEXIBILIDADE TOTAL PARA A SUA ROTINA",
-                    borderColor: "border-l-[#ff8c42]",
-                  },
-                  {
-                    title: "Bolsa Exclusiva",
-                    desc: "ATÉ 70% OFF + 3 PÓS PARA INDICAR",
-                    borderColor: "border-l-[#8b5cf6]",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className={`relative flex-[0_0_85%] md:flex-[0_0_40%] lg:flex-[0_0_28%] bg-[#1a1f35]/50 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 p-5 group overflow-hidden hover:bg-[#1a1f35]/80 hover:border-white/20 border-l-4 ${item.borderColor}`}
-                  >
-                    <h3 className="text-base font-bold text-white mb-2 uppercase tracking-tight">{item.title}</h3>
-                    <p className="text-white/50 text-xs uppercase tracking-wide leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
+          <div className="marquee-container">
+            <div className="marquee-content">
+              {/* Lista Original */}
+              {[
+                { text: "Conclua em 3 meses" },
+                { text: "+10 cursos de IA inclusos" },
+                { text: "Projetos com empresas" },
+                { text: "Certificação MEC" },
+                { text: "Mentoria executiva" },
+                { text: "Networking alumni" },
+                { text: "Aulas ao vivo e on demand" },
+                { text: "Bolsa Black Week" },
+              ].map((vantagem, index) => (
+                <div className="card-vantagem" key={`original-${index}`}>
+                  <CheckCircle2 className="w-5 h-5 text-accent mb-2 flex-shrink-0" />
+                  <p className="text-white font-semibold text-sm">{vantagem.text}</p>
+                </div>
+              ))}
+              {/* Lista Duplicada (para o efeito infinito) */}
+              {[
+                { text: "Conclua em 3 meses" },
+                { text: "+10 cursos de IA inclusos" },
+                { text: "Projetos com empresas" },
+                { text: "Certificação MEC" },
+                { text: "Mentoria executiva" },
+                { text: "Networking alumni" },
+                { text: "Aulas ao vivo e on demand" },
+                { text: "Bolsa Black Week" },
+              ].map((vantagem, index) => (
+                <div className="card-vantagem" key={`clone-${index}`} aria-hidden="true">
+                  <CheckCircle2 className="w-5 h-5 text-accent mb-2 flex-shrink-0" />
+                  <p className="text-white font-semibold text-sm">{vantagem.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
