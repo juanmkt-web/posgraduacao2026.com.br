@@ -31,11 +31,13 @@ const Index = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
-    dragFree: false
+    dragFree: true,
+    containScroll: false
   }, [Autoplay({
-    delay: 2500,
+    delay: 3000,
     stopOnInteraction: false,
-    stopOnMouseEnter: false
+    stopOnMouseEnter: false,
+    playOnInit: true
   })]);
 
   // Set countdown to 2 days from now
