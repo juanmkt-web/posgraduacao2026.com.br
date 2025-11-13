@@ -15,7 +15,6 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 const Index = () => {
   const {
     toast
@@ -31,14 +30,12 @@ const Index = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
-    dragFree: true
+    dragFree: false
   }, [Autoplay({
-    delay: 3000,
+    delay: 2500,
     stopOnInteraction: false,
-    stopOnMouseEnter: true
+    stopOnMouseEnter: false
   })]);
-  const scrollPrev = () => emblaApi?.scrollPrev();
-  const scrollNext = () => emblaApi?.scrollNext();
 
   // Set countdown to 2 days from now
   const countdownDate = new Date();
@@ -262,15 +259,6 @@ const Index = () => {
 
           {/* Carousel Container */}
           <div className="relative">
-            {/* Navigation Buttons */}
-            <Button variant="outline" size="icon" onClick={scrollPrev} className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 hidden md:flex">
-              <ChevronLeft className="h-6 w-6" />
-            </Button>
-
-            <Button variant="outline" size="icon" onClick={scrollNext} className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 hidden md:flex">
-              <ChevronRight className="h-6 w-6" />
-            </Button>
-
             {/* Embla Carousel */}
             <div className="overflow-hidden px-4 md:px-0" ref={emblaRef}>
               <div className="flex gap-6">
