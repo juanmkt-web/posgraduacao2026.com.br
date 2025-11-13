@@ -58,6 +58,7 @@ const Index = () => {
       align: "start",
       dragFree: true,
       containScroll: true,
+      animation: infinite-scroll 10s linear infinite;
     },
     [
       Autoplay({
