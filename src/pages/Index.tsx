@@ -492,7 +492,7 @@ const Index = () => {
                     </label>
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full">
+                  <Button type="submit" size="lg" className="w-full bg-[0C2039] bg-[#0c213b]">
                     Quero falar com um consultor
                   </Button>
 
