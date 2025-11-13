@@ -8,6 +8,7 @@ import { CountUp } from "@/components/CountUpStats";
 import { LiveFeed } from "@/components/LiveFeed";
 import { TrendingUp, PieChart, BarChart3, Sparkles, Brain, Briefcase, Award, Users, Clock, Video, BookOpen, Target, Lightbulb, GraduationCap, FolderKanban, Trophy, ChevronDown, CheckCircle2, Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Meteors } from "@/components/ui/meteors";
+import { BorderBeam } from "@/components/ui/border-beam";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -431,7 +432,7 @@ const Index = () => {
             </div>
 
             <div className="md:col-span-3">
-              <Card className="p-8 shadow-xl">
+              <Card className="relative p-8 shadow-xl overflow-hidden">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Input placeholder="Nome completo" value={formData.name} onChange={e => setFormData({
@@ -497,6 +498,7 @@ const Index = () => {
                     Seus dados estão protegidos. Entraremos em contato em até 24h.
                   </p>
                 </form>
+                <BorderBeam duration={12} size={150} />
               </Card>
             </div>
           </div>
