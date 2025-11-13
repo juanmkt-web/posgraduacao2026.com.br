@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
+import logoFasul from "@/assets/logo_fasul.png";
+
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,7 +34,11 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-white">Fasul</h1>
+            <img 
+              src={logoFasul} 
+              alt="Fasul" 
+              className="h-10 w-auto md:h-12 transition-all duration-300"
+            />
           </div>
 
           {/* Desktop Navigation */}
