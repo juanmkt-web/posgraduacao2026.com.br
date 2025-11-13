@@ -337,8 +337,8 @@ const Index = () => {
                     borderColor: "border-l-[#ff4d8f]",
                   },
                   {
-                    title: "Projetos com empresas",
-                    desc: "DESAFIOS REAIS COM MERCADO (LIVT, B3 E FINSTN)",
+                    title: "Conteúdo voltado para o mercado",
+                    desc: "DESAFIOS REAIS PARA O SEU DESENVOLVIMENTO",
                     borderColor: "border-l-[#00d9a3]",
                   },
                   {
@@ -347,17 +347,17 @@ const Index = () => {
                     borderColor: "border-l-[#8b5cf6]",
                   },
                   {
-                    title: "Mentoria executiva",
-                    desc: "ACOMPANHAMENTO INDIVIDUAL DE CARREIRA",
+                    title: "Trilha especializada",
+                    desc: "CONTEÚDO DESENVOLVIDO PENSANDO NA SUA CARREIRA",
                     borderColor: "border-l-[#3b82f6]",
                   },
                   {
                     title: "Networking alumni",
-                    desc: "COMUNIDADE ATIVA COM +25 MIL PROFISSIONAIS",
+                    desc: "COMUNIDADE ATIVA",
                     borderColor: "border-l-[#0ea5e9]",
                   },
                   {
-                    title: "Aulas ao vivo e on demand",
+                    title: "Aulas on demand",
                     desc: "FLEXIBILIDADE TOTAL PARA A SUA ROTINA",
                     borderColor: "border-l-[#ff8c42]",
                   },
