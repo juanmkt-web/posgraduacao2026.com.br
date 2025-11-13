@@ -7,6 +7,7 @@ import { CountdownTimer } from "@/components/CountdownTimer";
 import { CountUp } from "@/components/CountUpStats";
 import { LiveFeed } from "@/components/LiveFeed";
 import { TrendingUp, PieChart, BarChart3, Sparkles, Brain, Briefcase, Award, Users, Clock, Video, BookOpen, Target, Lightbulb, GraduationCap, FolderKanban, Trophy, ChevronDown, CheckCircle2, Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Meteors } from "@/components/ui/meteors";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -72,6 +73,11 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="gradient-hero pt-32 pb-20 px-4 relative overflow-hidden">
+        {/* Meteors effect */}
+        <div className="absolute inset-0 opacity-30">
+          <Meteors number={30} />
+        </div>
+        
         {/* Animated particles effect */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-2 h-2 bg-white rounded-full animate-pulse-soft" />
