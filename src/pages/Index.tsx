@@ -272,8 +272,8 @@ const Index = () => {
             </Button>
 
             {/* Embla Carousel */}
-            <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-4">
+            <div className="overflow-hidden px-4 md:px-0" ref={emblaRef}>
+              <div className="flex gap-6">
                 {[{
                 title: "Conclua em 3 meses",
                 desc: "PROGRAMAS INTENSIVOS COM MENTORIAS SEMANAIS",
@@ -306,8 +306,8 @@ const Index = () => {
                 title: "Bolsa Exclusiva",
                 desc: "ATÉ 70% OFF + 3 PÓS PARA INDICAR",
                 borderColor: "border-l-[#8b5cf6]"
-              }].map((item, index) => <div key={index} className={`relative flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] bg-[#1a1f35]/50 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 p-6 group overflow-hidden hover:bg-[#1a1f35]/80 hover:border-white/20 border-l-4 ${item.borderColor}`}>
-                    <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-tight">{item.title}</h3>
+              }].map((item, index) => <div key={index} className={`relative flex-[0_0_85%] md:flex-[0_0_40%] lg:flex-[0_0_28%] bg-[#1a1f35]/50 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 p-5 group overflow-hidden hover:bg-[#1a1f35]/80 hover:border-white/20 border-l-4 ${item.borderColor}`}>
+                    <h3 className="text-base font-bold text-white mb-2 uppercase tracking-tight">{item.title}</h3>
                     <p className="text-white/50 text-xs uppercase tracking-wide leading-relaxed">{item.desc}</p>
                   </div>)}
               </div>
