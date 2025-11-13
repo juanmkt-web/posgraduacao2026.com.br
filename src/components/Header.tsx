@@ -43,7 +43,7 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map(item => <a key={item.href} href={item.href} className="text-white/90 hover:text-white transition-colors text-sm font-medium">
+            {navItems.map(item => <a key={item.href} href={item.href} className="relative text-white/90 hover:text-white transition-all duration-300 text-sm font-medium after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white/80 after:transition-all after:duration-300 hover:after:w-full">
                 {item.label}
               </a>)}
           </nav>
