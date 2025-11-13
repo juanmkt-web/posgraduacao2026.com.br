@@ -169,36 +169,36 @@ const Index = () => {
 
             {/* Right Column - 40% Pricing Card */}
             <div className="md:col-span-2">
-              <Card className="bg-white/95 backdrop-blur-sm border-none shadow-2xl p-8">
+              <Card className="bg-secondary/10 backdrop-blur-sm border border-secondary/20 shadow-2xl p-8">
                 <div className="text-center space-y-4">
-                  <div className="bg-accent/10 rounded-lg py-2">
-                    <p className="text-accent font-bold text-sm uppercase tracking-wide">
+                  <div className="bg-secondary/30 rounded-lg py-2">
+                    <p className="text-primary font-bold text-sm uppercase tracking-wide">
                       Condição Especial de Lançamento
                     </p>
                   </div>
                   
                   <div>
-                    <p className="text-muted-foreground text-sm">A partir de 12x de</p>
+                    <p className="text-primary/70 text-sm">A partir de 12x de</p>
                     <p className="text-5xl font-bold text-primary">R$ 66</p>
-                    <p className="text-muted-foreground text-sm">mensais*</p>
+                    <p className="text-primary/70 text-sm">mensais*</p>
                   </div>
                   
                   <div className="space-y-3 text-left pt-4">
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                      <p className="text-sm">Mentoria executiva e experiências imersivas</p>
+                      <p className="text-sm text-primary/80">Mentoria executiva e experiências imersivas</p>
                     </div>
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                      <p className="text-sm">Conclusão a partir de 3 meses</p>
+                      <p className="text-sm text-primary/80">Conclusão a partir de 3 meses</p>
                     </div>
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                      <p className="text-sm">Aulas ao vivo e on-demand</p>
+                      <p className="text-sm text-primary/80">Aulas ao vivo e on-demand</p>
                     </div>
                   </div>
                   
-                  <Button className="w-full" variant="link">
+                  <Button className="w-full text-primary hover:text-primary/80" variant="link">
                     Ver condições
                   </Button>
                 </div>
