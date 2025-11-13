@@ -195,7 +195,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
               <h2 className="text-3xl font-bold text-white mb-2">Incentivos exclusivos para a nova turma</h2>
-              <p className="text-white/80 mb-1">Aproveite benefícios como +3 cursos bônus de IA e até 70% OFF.*</p>
+              <p className="text-white/80 mb-1 font-normal text-base">Aproveite benefícios como +3 cursos bônus de IA e até 70% OFF.*</p>
               <p className="text-accent font-bold text-lg">VAGAS LIMITADAS</p>
             </div>
 
