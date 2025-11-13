@@ -104,10 +104,8 @@ const Index = () => {
                 Transforme sua expertise em liderança e performance profissional
               </h1>
 
-              <p className="text-xl text-white/90 leading-relaxed">
-                Junte-se aos +35 mil profissionais que avançaram na carreira. 87% dos nossos
-alunos são promovidos em até 12 meses após a conclusão.
-              </p>
+              <p className="text-xl text-white/90 leading-relaxed">Junte-se aos +35 mil profissionais que avançaram na carreira. 
+87% dos nossos alunos são promovidos em até 12 meses após a conclusão.</p>
 
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
