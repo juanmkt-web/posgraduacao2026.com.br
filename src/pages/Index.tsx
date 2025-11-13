@@ -431,10 +431,8 @@ const Index = () => {
             </div>
 
             <div className="md:col-span-3">
-              <div className="relative">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400/20 via-blue-500/40 to-blue-400/20 rounded-lg blur animate-border-beam"></div>
-                <Card className="relative p-8 shadow-xl bg-card">
-                  <form onSubmit={handleSubmit} className="space-y-4">
+              <Card className="p-8 shadow-xl">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Input placeholder="Nome completo" value={formData.name} onChange={e => setFormData({
                     ...formData,
@@ -500,7 +498,6 @@ const Index = () => {
                   </p>
                 </form>
               </Card>
-              </div>
             </div>
           </div>
         </div>
