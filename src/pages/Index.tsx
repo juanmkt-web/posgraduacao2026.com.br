@@ -238,20 +238,14 @@ const Index = () => {
       </section>
 
       {/* Advantages Section - Carousel */}
-      <section id="advantages" className="relative py-20 px-4 overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(var(--dark)) 0%, hsl(220, 70%, 10%) 100%)' }}>
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-primary/30 rounded-full blur-3xl animate-pulse-soft" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '1s' }} />
-        </div>
-
+      <section id="advantages" className="relative py-20 px-4 overflow-hidden bg-[#0a0f1f]">
         <div className="container mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
-            Vantagens exclusivas na pós-graduação Fasul
-          </h2>
-          <p className="text-center text-white/80 text-lg mb-12 max-w-2xl mx-auto">
-            Diferenciais que impulsionam sua carreira além do diploma
-          </p>
+          <div className="text-center mb-12">
+            <p className="text-white/50 text-sm uppercase tracking-[0.3em] mb-4">BENEFÍCIOS & PROMOÇÕES</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Vantagens exclusivas na pós-graduação FASUL
+            </h2>
+          </div>
           
           {/* Carousel Container */}
           <div className="relative">
@@ -276,42 +270,24 @@ const Index = () => {
 
             {/* Embla Carousel */}
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-6">
+              <div className="flex gap-4">
                 {[
-                  { icon: Clock, title: "Conclua em 3 meses", desc: "Programas intensivos com mentorias semanais", color: "bg-primary" },
-                  { icon: Brain, title: "+10 Cursos de IA Inclusos", desc: "Especialização em Inteligência Artificial Aplicada", color: "bg-secondary" },
-                  { icon: Briefcase, title: "Projetos com Empresas", desc: "Desafios reais com mercado (LivT, B3, etc.)", color: "bg-primary" },
-                  { icon: Award, title: "Certificação MEC", desc: "Diploma reconhecido nacionalmente", color: "bg-secondary" },
-                  { icon: Users, title: "Mentoria Executiva", desc: "Acompanhamento individual de carreira", color: "bg-primary" },
-                  { icon: Sparkles, title: "Networking Alumni", desc: "Comunidade ativa com +35 mil profissionais", color: "bg-secondary" },
-                  { icon: Video, title: "Aulas ao vivo e on demand", desc: "Flexibilidade total para sua rotina", color: "bg-primary" },
-                  { icon: Target, title: "Bolsa Exclusiva", desc: "Até 70% OFF + 3 Pós para indicar", color: "bg-secondary" },
+                  { title: "Conclua em 3 meses", desc: "PROGRAMAS INTENSIVOS COM MENTORIAS SEMANAIS", borderColor: "border-l-[#ff8c42]" },
+                  { title: "+10 cursos de IA inclusos", desc: "ESPECIALIZE-SE EM INTELIGÊNCIA ARTIFICIAL APLICADA", borderColor: "border-l-[#ff4d8f]" },
+                  { title: "Projetos com empresas", desc: "DESAFIOS REAIS COM MERCADO (LIVT, B3 E FINSTN)", borderColor: "border-l-[#00d9a3]" },
+                  { title: "Certificação MEC", desc: "DIPLOMA RECONHECIDO NACIONALMENTE", borderColor: "border-l-[#8b5cf6]" },
+                  { title: "Mentoria executiva", desc: "ACOMPANHAMENTO INDIVIDUAL DE CARREIRA", borderColor: "border-l-[#3b82f6]" },
+                  { title: "Networking alumni", desc: "COMUNIDADE ATIVA COM +25 MIL PROFISSIONAIS", borderColor: "border-l-[#0ea5e9]" },
+                  { title: "Aulas ao vivo e on demand", desc: "FLEXIBILIDADE TOTAL PARA A SUA ROTINA", borderColor: "border-l-[#ff8c42]" },
+                  { title: "Bolsa Exclusiva", desc: "ATÉ 70% OFF + 3 PÓS PARA INDICAR", borderColor: "border-l-[#8b5cf6]" },
                 ].map((item, index) => (
-                  <Card 
+                  <div 
                     key={index} 
-                    className="relative flex-[0_0_100%] md:flex-[0_0_45%] lg:flex-[0_0_30%] bg-white/5 backdrop-blur-md border-white/10 hover:border-primary/50 transition-all duration-300 p-6 group overflow-hidden min-h-[240px]"
-                    style={{ 
-                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-                    }}
+                    className={`relative flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] bg-[#1a1f35]/50 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 p-6 group overflow-hidden hover:bg-[#1a1f35]/80 hover:border-white/20 border-l-4 ${item.borderColor}`}
                   >
-                    {/* Top colored bar */}
-                    <div className={`absolute top-0 left-0 right-0 h-1 ${item.color}`} />
-                    
-                    {/* Gradient overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br from-${item.color}/20 to-${item.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                    
-                    {/* Shine effect */}
-                    <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:left-full transition-all duration-700 ease-in-out" />
-                    
-                    {/* Icon with glow */}
-                    <div className="relative mb-4">
-                      <div className="absolute inset-0 bg-primary/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <item.icon className="relative h-12 w-12 text-primary group-hover:text-white group-hover:scale-110 transition-all duration-300" />
-                    </div>
-                    
-                    <h3 className="relative text-lg font-bold text-white mb-2">{item.title}</h3>
-                    <p className="relative text-white/70 text-sm">{item.desc}</p>
-                  </Card>
+                    <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-tight">{item.title}</h3>
+                    <p className="text-white/50 text-xs uppercase tracking-wide leading-relaxed">{item.desc}</p>
+                  </div>
                 ))}
               </div>
             </div>
