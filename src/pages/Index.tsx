@@ -96,10 +96,13 @@ const Index = () => {
 
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-[#fff719] text-[#0c213b] font-semibold px-8 hover:bg-[#ffeb3b] hover:scale-[1.02] hover:shadow-xl transition-all duration-500 ease-out" asChild>
-                  <a href="#lead-form" onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }}>
+                  <a href="#lead-form" onClick={e => {
+                  e.preventDefault();
+                  document.getElementById('lead-form')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }}>
                     Garantir minha bolsa
                   </a>
                 </Button>
@@ -485,7 +488,7 @@ const Index = () => {
                   <div className="bg-accent rounded-lg p-6 text-center my-6">
                     <p className="text-[#0d213a] text-sm font-semibold mb-2">A partir de</p>
                     <p className="text-[#0d213a] text-5xl font-extrabold mb-2">R$ 66/mês</p>
-                    <p className="text-[#0d213a] text-sm font-semibold">Apenas R$ 3,30 por dia</p>
+                    <p className="text-[#0d213a] text-sm font-semibold">Apenas R$ 2,20 por dia</p>
                   </div>
 
                   {/* Financing Info */}
