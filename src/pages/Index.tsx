@@ -316,7 +316,7 @@ const Index = () => {
                 <span className="text-primary text-sm font-semibold uppercase">Resultados de Empregabilidade</span>
               </div>
 
-              <h2 className="text-4xl font-bold">Evolução concreta da carreira com dados e acompanhamento</h2>
+              <h2 className="text-4xl font-bold">Evolução concreta da carreira</h2>
 
               <p className="text-xl text-muted-foreground">
                 Nossa formação combina competências técnicas e comportamentais para você liderar transformações
