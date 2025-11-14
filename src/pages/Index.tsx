@@ -692,8 +692,8 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="text-white py-12 px-4 bg-[0C2039] bg-[#0d213a]">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="container mx-auto text-center">
+          <div className="grid md:grid-cols-4 gap-8 mb-8 max-w-4xl mx-auto">
             <div>
               <h4 className="font-bold mb-4">Institucional</h4>
               <ul className="space-y-2 text-sm text-white/80">
@@ -755,8 +755,11 @@ const Index = () => {
                   </a>
                 </li>
               </ul>
+            </div>
 
-              <div className="flex gap-3">
+            <div>
+              <h4 className="font-bold mb-4">Redes Sociais</h4>
+              <div className="flex gap-3 justify-center">
                 <a href="#" className="hover:text-accent transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
@@ -773,7 +776,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="border-t border-white/20 pt-6 text-center text-sm text-white/60">
+          <div className="border-t border-white/20 pt-6 text-sm text-white/60">
             <p>© 2025 Fasul Educacional. Todos os direitos reservados.</p>
           </div>
         </div>
