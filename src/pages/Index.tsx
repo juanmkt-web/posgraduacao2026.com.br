@@ -759,13 +759,13 @@ const Index = () => {
                 <a href="https://www.facebook.com/fasuleducacionalead" className="hover:text-accent transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="#" className="hover:text-accent transition-colors">
+                <a href="https://www.instagram.com/fasulead/" className="hover:text-accent transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="#" className="hover:text-accent transition-colors">
+                <a href="https://www.linkedin.com/school/54152401/" className="hover:text-accent transition-colors">
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="#" className="hover:text-accent transition-colors">
+                <a href="https://www.youtube.com/@fasuleducacionalead" className="hover:text-accent transition-colors">
                   <Youtube className="h-5 w-5" />
                 </a>
               </div>
