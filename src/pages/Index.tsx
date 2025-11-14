@@ -426,7 +426,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                  <p>Guia de cursos + matriz curricular por e-mail</p>
+                  <p>Atendimento rápido e personalizado            </p>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
