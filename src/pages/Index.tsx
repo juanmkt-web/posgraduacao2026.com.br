@@ -415,8 +415,7 @@ const Index = () => {
               <h2 className="text-4xl font-bold">Receba o guia completo dos programas</h2>
 
               <p className="text-xl text-muted-foreground">
-                Preencha o formulário para conversar com nosso time de consultores educacionais e descobrir as condições
-                especiais desta edição.
+                Entre em contato para conversar com nosso time de consultores educacionais e descobrir as condições especiais desta edição.
               </p>
 
               <div className="space-y-3">
