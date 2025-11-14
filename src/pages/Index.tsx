@@ -756,7 +756,7 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-4">Redes Sociais</h4>
               <div className="flex gap-3 justify-center">
-                <a href="#" className="hover:text-accent transition-colors">
+                <a href="https://www.facebook.com/fasuleducacionalead" className="hover:text-accent transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a href="#" className="hover:text-accent transition-colors">
