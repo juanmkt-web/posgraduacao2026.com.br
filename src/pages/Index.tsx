@@ -225,7 +225,11 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <Button size="lg" className="w-full text-white bg-[0C2039] bg-[#0c213b]">
+                  <Button
+                    href="https://www.fasuleducacional.edu.br/regulamentos-campanhas-promocionais"
+                    size="lg"
+                    className="w-full text-white bg-[0C2039] bg-[#0c213b]"
+                  >
                     Ver condições
                   </Button>
                 </div>
