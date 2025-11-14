@@ -268,17 +268,17 @@ const Index = () => {
             }, {
               text: "+10 cursos de IA inclusos"
             }, {
-              text: "Projetos com empresas"
+              text: "Faça de onde quiser"
             }, {
               text: "Certificação MEC"
             }, {
-              text: "Mentoria executiva"
+              text: "Liberdade e Flexibilidade"
             }, {
               text: "Networking alumni"
             }, {
-              text: "Aulas ao vivo e on demand"
+              text: "Aulas on demand"
             }, {
-              text: "Bolsa Black Week"
+              text: "Bolsa Fasul""
             }].map((vantagem, index) => <div className="card-vantagem" key={`original-${index}`}>
                   <CheckCircle2 className="w-5 h-5 text-accent mb-2 flex-shrink-0" />
                   <p className="text-white font-semibold text-sm">{vantagem.text}</p>
