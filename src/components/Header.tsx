@@ -54,7 +54,9 @@ export const Header = () => {
               
               
             </a>
-            <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">​Garantir minha bolsa</Button>
+            <a href="https://www.fasuleducacional.edu.br/posgraduacao/cursos" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">​Garantir minha bolsa</Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

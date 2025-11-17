@@ -225,13 +225,14 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <Button
-                    href="https://www.fasuleducacional.edu.br/regulamentos-campanhas-promocionais"
-                    size="lg"
-                    className="w-full text-white bg-[0C2039] bg-[#0c213b]"
-                  >
-                    Ver condições
-                  </Button>
+                  <a href="https://www.fasuleducacional.edu.br/regulamentos-campanhas-promocionais" target="_blank" rel="noopener noreferrer" className="w-full">
+                    <Button
+                      size="lg"
+                      className="w-full text-white bg-[0C2039] bg-[#0c213b]"
+                    >
+                      Ver condições
+                    </Button>
+                  </a>
                 </div>
               </Card>
             </div>
