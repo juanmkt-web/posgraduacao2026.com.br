@@ -150,7 +150,7 @@ const Index = () => {
             {/* Right Column - 40% Pricing Card */}
             <div className="md:col-span-2">
               <Card className="bg-white/95 backdrop-blur-sm border-none shadow-2xl p-8 animate-float hover:shadow-primary/20 transition-shadow duration-300">
-                <div className="text-center space-y-6">
+                <div className="text-center space-y-6 my-[2px]">
                   <div className="bg-primary/10 rounded-lg py-3 px-4">
                     <p className="text-primary font-bold text-sm uppercase tracking-wide">
                       Condição Especial de Lançamento
@@ -163,7 +163,7 @@ const Index = () => {
                     <p className="text-muted-foreground text-base">mensais*</p>
                   </div>
 
-                  <div className="space-y-3 text-left pt-2">
+                  <div className="space-y-3 text-left pt-2 my-0">
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <p className="text-sm">​Ganhe mais 3 Pós-Graduações como bônus</p>
