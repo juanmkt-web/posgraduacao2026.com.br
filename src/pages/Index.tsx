@@ -441,17 +441,7 @@ const Index = () => {
 
                   {/* Benefits List */}
                   <div className="space-y-4 mb-6">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <div>
-                        <h4 className="font-bold text-lg">+10 Cursos de IA</h4>
-                        <p className="text-muted-foreground text-sm">
-                          Aprenda as principais ferramentas de Inteligência Artificial
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
                         <h4 className="font-bold text-lg">+3 Pós-Graduações grátis</h4>
