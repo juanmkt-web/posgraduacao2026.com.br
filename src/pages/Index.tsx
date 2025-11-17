@@ -85,9 +85,7 @@ const Index = () => {
                 <span className="text-white text-sm font-semibold">PÓS-GRADUAÇÃO EAD</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-                Transforme sua expertise em liderança e performance profissional
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">​Inicie sua Pós hoje, com matricula grátis e receba mais 3 como bônus</h1>
 
               <p className="text-xl text-white/90 leading-relaxed">
                 Junte-se aos +35 mil profissionais que avançaram na carreira.  87% dos nossos alunos são promovidos em
