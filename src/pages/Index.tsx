@@ -377,7 +377,7 @@ const Index = () => {
                 <span className="text-secondary text-sm font-semibold uppercase">Inscrições em tempo real</span>
               </div>
 
-              <h2 className="text-4xl font-bold">Quem está garantindo vaga agora na pós</h2>
+              <h2 className="text-4xl font-bold">Quem está garantindo vaga agora na Pós</h2>
 
               <p className="text-xl text-muted-foreground">
                 A cada minuto novos profissionais se conectam. Veja as inscrições recentes e garanta a sua antes que as
