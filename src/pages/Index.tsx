@@ -225,11 +225,13 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <a href="https://www.fasuleducacional.edu.br/regulamentos-campanhas-promocionais" target="_blank" rel="noopener noreferrer" className="w-full">
-                    <Button
-                      size="lg"
-                      className="w-full text-white bg-[0C2039] bg-[#0c213b]"
-                    >
+                  <a
+                    href="https://www.fasuleducacional.edu.br/regulamentos-campanhas-promocionais"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
+                    <Button size="lg" className="w-full text-white bg-[0C2039] bg-[#0c213b]">
                       Ver condições
                     </Button>
                   </a>
@@ -268,7 +270,7 @@ const Index = () => {
               A combinação certa entre excelência acadêmica e performance profissional
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Estruturamos as jornadas de pós-graduação para que você aprenda com profundidade, aplique rápido e avance
+              Estruturamos as jornadas de Pós-Graduação para que você aprenda com profundidade, aplique rápido e avance
               na carreira
             </p>
           </div>
