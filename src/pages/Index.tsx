@@ -575,99 +575,28 @@ const Index = () => {
       {/* Footer */}
       <footer className="text-white py-12 px-4 bg-[0C2039] bg-[#0d213a]">
         <div className="container mx-auto">
-          {/* Logo and MEC Badge Section */}
-          <div className="flex flex-col items-center mb-8 pb-8 border-b border-white/20">
-            <img src="/src/assets/logo_fasul.png" alt="Fasul Educacional" className="h-16 mb-3" />
-            <div className="bg-accent rounded-lg px-6 py-2">
-              <p className="text-[#0d213a] font-bold text-sm">Nota Máxima no MEC</p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 mb-8 max-w-4xl mx-auto">
-            <div>
-              <h4 className="font-bold mb-4">Institucional</h4>
-              <ul className="space-y-2 text-sm text-white/80">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Quem somos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Estrutura
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Reconhecimentos
-                  </a>
-                </li>
-              </ul>
+          <div className="flex flex-col items-center space-y-6">
+            {/* Logo */}
+            <img src="/src/assets/logo_fasul.png" alt="Fasul Educacional" className="h-16" />
+            
+            {/* Social Media */}
+            <div className="flex gap-4">
+              <a href="https://www.facebook.com/fasuleducacionalead" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a href="https://www.instagram.com/fasulead/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="https://www.linkedin.com/school/54152401/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a href="https://www.youtube.com/@fasuleducacionalead" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <Youtube className="h-6 w-6" />
+              </a>
             </div>
 
-            <div>
-              <h4 className="font-bold mb-4">Cursos</h4>
-              <ul className="space-y-2 text-sm text-white/80">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    MBA & Pós
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Graduação EAD
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Extensão Executiva
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Suporte</h4>
-              <ul className="space-y-2 text-sm text-white/80 mb-4">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Central do aluno
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Atendimento
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Fale conosco
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Redes Sociais</h4>
-              <div className="flex gap-3 justify-center">
-                <a href="https://www.facebook.com/fasuleducacionalead" className="hover:text-accent transition-colors">
-                  <Facebook className="h-5 w-5" />
-                </a>
-                <a href="https://www.instagram.com/fasulead/" className="hover:text-accent transition-colors">
-                  <Instagram className="h-5 w-5" />
-                </a>
-                <a href="https://www.linkedin.com/school/54152401/" className="hover:text-accent transition-colors">
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a href="https://www.youtube.com/@fasuleducacionalead" className="hover:text-accent transition-colors">
-                  <Youtube className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-white/20 pt-6 text-sm text-white/60">
-            <p>© 2025 Fasul Educacional. Todos os direitos reservados.</p>
+            {/* Copyright */}
+            <p className="text-sm text-white/60 pt-4">© 2025 Fasul Educacional. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
