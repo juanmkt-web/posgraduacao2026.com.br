@@ -574,7 +574,15 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="text-white py-12 px-4 bg-[0C2039] bg-[#0d213a]">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto">
+          {/* Logo and MEC Badge Section */}
+          <div className="flex flex-col items-center mb-8 pb-8 border-b border-white/20">
+            <img src="/src/assets/logo_fasul.png" alt="Fasul Educacional" className="h-16 mb-3" />
+            <div className="bg-accent rounded-lg px-6 py-2">
+              <p className="text-[#0d213a] font-bold text-sm">Nota Máxima no MEC</p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-4 gap-8 mb-8 max-w-4xl mx-auto">
             <div>
               <h4 className="font-bold mb-4">Institucional</h4>
