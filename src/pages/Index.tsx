@@ -184,19 +184,19 @@ const Index = () => {
       </section>
 
       {/* Countdown Banner */}
-      <section className="gradient-dark py-12 px-4">
+      <section className="gradient-dark py-8 md:py-12 px-4">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl font-bold text-white mb-2">Incentivos exclusivos para a nova turma</h2>
-              <p className="text-white/80 mb-1 font-normal text-base">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8">
+            <div className="text-center lg:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Incentivos exclusivos para a nova turma</h2>
+              <p className="text-white/80 mb-1 font-normal text-sm md:text-base">
                 Aproveite benefícios como +3 cursos bônus de IA e até 70% OFF.*
               </p>
-              <p className="text-accent font-bold text-lg">VAGAS LIMITADAS</p>
+              <p className="text-accent font-bold text-base md:text-lg">VAGAS LIMITADAS</p>
             </div>
 
-            <div className="text-center">
-              <p className="text-white/80 mb-4 uppercase text-sm tracking-wide">A oferta termina em:</p>
+            <div className="text-center w-full lg:w-auto">
+              <p className="text-white/80 mb-3 md:mb-4 uppercase text-xs md:text-sm tracking-wide">A oferta termina em:</p>
               <CountdownTimer targetDate={countdownDate} />
             </div>
           </div>
