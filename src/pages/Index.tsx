@@ -14,6 +14,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import logoFasul from "@/assets/logo_fasul.png";
 const Index = () => {
   const {
     toast
@@ -577,7 +578,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex flex-col items-center space-y-6">
             {/* Logo */}
-            <img src="/src/assets/logo_fasul.png" alt="Fasul Educacional" className="h-16" />
+            <img src={logoFasul} alt="Fasul Educacional" className="h-16" />
             
             {/* Social Media */}
             <div className="flex gap-4">
