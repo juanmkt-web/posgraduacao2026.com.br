@@ -60,7 +60,7 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero pt-32 pb-20 px-4 relative overflow-hidden">
+      <section className="gradient-hero pt-20 md:pt-32 pb-12 md:pb-20 px-4 relative overflow-hidden">
         {/* Meteors effect */}
         <div className="absolute inset-0 opacity-50">
           <Meteors number={50} />
@@ -79,16 +79,16 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="grid md:grid-cols-5 gap-8 items-center">
+          <div className="grid lg:grid-cols-5 gap-6 md:gap-8 items-center">
             {/* Left Column - 60% */}
-            <div className="md:col-span-3 space-y-6">
+            <div className="lg:col-span-3 space-y-4 md:space-y-6">
               <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2">
                 <span className="text-white text-sm font-semibold">PÓS-GRADUAÇÃO EAD</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">​Inicie sua Pós hoje, com matricula grátis e receba mais 3 como bônus</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">​Inicie sua Pós hoje, com matricula grátis e receba mais 3 como bônus</h1>
 
-              <p className="text-xl text-white/90 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
                 Junte-se aos +35 mil profissionais que avançaram na carreira.  87% dos nossos alunos são promovidos em
                 até 12 meses após a conclusão.
               </p>
@@ -113,42 +113,42 @@ const Index = () => {
               </div>
 
               {/* Social Proof Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 pt-6 md:pt-8">
                 <div className="text-center">
-                  <div className="flex justify-center mb-2">
-                    <TrendingUp className="h-8 w-8 text-accent" />
+                  <div className="flex justify-center mb-1 md:mb-2">
+                    <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-accent" />
                   </div>
-                  <div className="text-3xl font-bold text-white">
+                  <div className="text-2xl md:text-3xl font-bold text-white">
                     +<CountUp end={35} suffix="k" />
                   </div>
-                  <p className="text-white/80 text-sm mt-1">Profissionais impulsionados</p>
+                  <p className="text-white/80 text-xs md:text-sm mt-1">Profissionais impulsionados</p>
                 </div>
 
                 <div className="text-center">
-                  <div className="flex justify-center mb-2">
-                    <PieChart className="h-8 w-8 text-accent" />
+                  <div className="flex justify-center mb-1 md:mb-2">
+                    <PieChart className="h-6 w-6 md:h-8 md:w-8 text-accent" />
                   </div>
-                  <div className="text-3xl font-bold text-white">
+                  <div className="text-2xl md:text-3xl font-bold text-white">
                     <CountUp end={98} suffix="%" />
                   </div>
-                  <p className="text-white/80 text-sm mt-1">Satisfação dos alunos</p>
+                  <p className="text-white/80 text-xs md:text-sm mt-1">Satisfação dos alunos</p>
                 </div>
 
                 <div className="text-center">
-                  <div className="flex justify-center mb-2">
-                    <BarChart3 className="h-8 w-8 text-accent" />
+                  <div className="flex justify-center mb-1 md:mb-2">
+                    <BarChart3 className="h-6 w-6 md:h-8 md:w-8 text-accent" />
                   </div>
-                  <div className="text-3xl font-bold text-white">
+                  <div className="text-2xl md:text-3xl font-bold text-white">
                     +<CountUp end={120} />
                   </div>
-                  <p className="text-white/80 text-sm mt-1">Empresas parceiras</p>
+                  <p className="text-white/80 text-xs md:text-sm mt-1">Empresas parceiras</p>
                 </div>
               </div>
             </div>
 
             {/* Right Column - 40% Pricing Card */}
-            <div className="md:col-span-2">
-              <Card className="bg-white/95 backdrop-blur-sm border-none shadow-2xl p-8 animate-float hover:shadow-primary/20 transition-shadow duration-300">
+            <div className="lg:col-span-2">
+              <Card className="bg-white/95 backdrop-blur-sm border-none shadow-2xl p-6 md:p-8 animate-float hover:shadow-primary/20 transition-shadow duration-300">
                 <div className="text-center space-y-6 my-[2px]">
                   <div className="bg-primary/10 rounded-lg py-3 px-4">
                     <p className="text-primary font-bold text-sm uppercase tracking-wide">
@@ -157,9 +157,9 @@ const Index = () => {
                   </div>
 
                   <div className="py-4">
-                    <p className="text-muted-foreground text-base mb-2">A partir de 12x de</p>
-                    <p className="mb-2 font-sans font-extrabold text-[#0b1f37] text-8xl">R$66</p>
-                    <p className="text-muted-foreground text-base">mensais*</p>
+                    <p className="text-muted-foreground text-sm md:text-base mb-2">A partir de 12x de</p>
+                    <p className="mb-2 font-sans font-extrabold text-[#0b1f37] text-6xl md:text-7xl lg:text-8xl">R$66</p>
+                    <p className="text-muted-foreground text-sm md:text-base">mensais*</p>
                   </div>
 
                   <div className="space-y-3 text-left pt-2 my-0">
