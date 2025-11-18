@@ -403,13 +403,13 @@ const Index = () => {
       </section>
 
       {/* Lead Form Section */}
-      <section id="lead-form" className="py-20 px-4">
+      <section id="lead-form" className="py-12 md:py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-5 gap-12 items-center">
-            <div className="md:col-span-2 space-y-6">
-              <h2 className="text-4xl font-bold">Receba o guia completo dos programas</h2>
+          <div className="grid lg:grid-cols-5 gap-8 md:gap-12 items-center">
+            <div className="lg:col-span-2 space-y-4 md:space-y-6">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Receba o guia completo dos programas</h2>
 
-              <p className="text-xl text-muted-foreground">
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
                 Entre em contato para conversar com nosso time de consultores educacionais e descobrir as condições
                 especiais desta edição.
               </p>
@@ -430,16 +430,16 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="md:col-span-3">
-              <Card className="relative p-8 shadow-xl overflow-hidden bg-muted/30 border border-border">
-                <div className="space-y-6">
+            <div className="lg:col-span-3">
+              <Card className="relative p-5 md:p-6 lg:p-8 shadow-xl overflow-hidden bg-muted/30 border border-border">
+                <div className="space-y-4 md:space-y-6">
                   {/* Header */}
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-bold">Bônus Exclusivos Desta Campanha</h3>
+                  <div className="mb-4 md:mb-6">
+                    <h3 className="text-xl md:text-2xl font-bold">Bônus Exclusivos Desta Campanha</h3>
                   </div>
 
                   {/* Benefits List */}
-                  <div className="space-y-4 mb-6">
+                  <div className="space-y-3 md:space-y-4 mb-4 md:mb-6">
                   <div className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
@@ -468,24 +468,24 @@ const Index = () => {
                   </div>
 
                   {/* Price Card */}
-                  <div className="bg-accent rounded-lg p-6 text-center my-6">
-                    <p className="text-[#0d213a] text-sm font-semibold mb-2">A partir de</p>
-                    <p className="text-[#0d213a] font-extrabold mb-2 text-6xl">R$ 66/mês</p>
-                    <p className="text-[#0d213a] text-sm font-semibold">Apenas R$ 2,20 por dia</p>
+                  <div className="bg-accent rounded-lg p-4 md:p-6 text-center my-4 md:my-6">
+                    <p className="text-[#0d213a] text-xs md:text-sm font-semibold mb-1 md:mb-2">A partir de</p>
+                    <p className="text-[#0d213a] font-extrabold mb-1 md:mb-2 text-4xl md:text-5xl lg:text-6xl">R$ 66/mês</p>
+                    <p className="text-[#0d213a] text-xs md:text-sm font-semibold">Apenas R$ 2,20 por dia</p>
                   </div>
 
                   {/* Financing Info */}
-                  <div className="mb-6">
-                    <h4 className="font-bold text-lg mb-2">
+                  <div className="mb-4 md:mb-6">
+                    <h4 className="font-bold text-base md:text-lg mb-2">
                       Bolsas e Financiamentos: PROUNI, FIES, Parcelamento FASUL
                     </h4>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-xs md:text-sm">
                       Diversas opções de financiamento e bolsas disponíveis. Consulte nossas condições especiais.
                     </p>
                   </div>
 
                   {/* CTA Button */}
-                  <Button size="lg" className="w-full bg-[#0c213b] hover:bg-[#0c213b]/90 text-white font-bold text-lg py-6 hover:scale-105 transition-all duration-300" asChild>
+                  <Button size="lg" className="w-full bg-[#0c213b] hover:bg-[#0c213b]/90 text-white font-bold text-base md:text-lg py-5 md:py-6 hover:scale-105 transition-all duration-300" asChild>
                     <a href="https://www.fasuleducacional.edu.br/#anchor_pos" target="_blank" rel="noopener noreferrer">
                       QUERO MINHA BOLSA
                     </a>
