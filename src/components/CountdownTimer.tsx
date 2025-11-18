@@ -36,13 +36,13 @@ export const CountdownTimer = ({ targetDate }: { targetDate: Date }) => {
   const formatNumber = (num: number) => String(num).padStart(2, '0');
 
   return (
-    <div className="flex gap-3 justify-center items-center">
+    <div className="flex gap-2 md:gap-3 justify-center items-center">
       <TimeUnit value={formatNumber(timeLeft.days)} label="dias" />
-      <span className="text-2xl font-bold text-accent">:</span>
+      <span className="text-xl md:text-2xl font-bold text-accent">:</span>
       <TimeUnit value={formatNumber(timeLeft.hours)} label="horas" />
-      <span className="text-2xl font-bold text-accent">:</span>
+      <span className="text-xl md:text-2xl font-bold text-accent">:</span>
       <TimeUnit value={formatNumber(timeLeft.minutes)} label="min" />
-      <span className="text-2xl font-bold text-accent">:</span>
+      <span className="text-xl md:text-2xl font-bold text-accent">:</span>
       <TimeUnit value={formatNumber(timeLeft.seconds)} label="seg" />
     </div>
   );
@@ -50,9 +50,9 @@ export const CountdownTimer = ({ targetDate }: { targetDate: Date }) => {
 
 const TimeUnit = ({ value, label }: { value: string; label: string }) => (
   <div className="flex flex-col items-center">
-    <div className="bg-secondary/20 backdrop-blur-sm border border-secondary/30 rounded-lg px-4 py-3 min-w-[70px] text-center">
-      <span className="text-3xl font-bold text-white">{value}</span>
+    <div className="bg-secondary/20 backdrop-blur-sm border border-secondary/30 rounded-lg px-2 py-2 md:px-4 md:py-3 min-w-[50px] md:min-w-[70px] text-center">
+      <span className="text-2xl md:text-3xl font-bold text-white">{value}</span>
     </div>
-    <span className="text-sm text-muted-foreground mt-1">{label}</span>
+    <span className="text-xs md:text-sm text-muted-foreground mt-1">{label}</span>
   </div>
 );
