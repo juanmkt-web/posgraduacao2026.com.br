@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import logoFasul from "@/assets/logo_fasul.png";
-
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,11 +33,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src={logoFasul} 
-              alt="Fasul" 
-              className="h-10 w-auto md:h-12 transition-all duration-300"
-            />
+            <img src={logoFasul} alt="Fasul" className="h-10 w-auto md:h-12 transition-all duration-300" />
           </div>
 
           {/* Desktop Navigation */}
@@ -71,13 +66,8 @@ export const Header = () => {
               {navItems.map(item => <a key={item.href} href={item.href} className="text-white/90 hover:text-white transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                   {item.label}
                 </a>)}
-              <a href="tel:08001234567" className="flex items-center gap-2 text-white/90 hover:text-white transition-colors">
-                <Phone className="h-4 w-4" />
-                <span className="font-semibold">0800 123 456</span>
-              </a>
-              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
-                Falar com consultor
-              </Button>
+              
+              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">Garantir minha bolsa</Button>
             </nav>
           </div>}
       </div>
