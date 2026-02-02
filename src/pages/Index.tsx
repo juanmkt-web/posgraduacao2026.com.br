@@ -15,6 +15,8 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import logoFasul from "@/assets/logo_fasul.png";
+import Faculty from "@/components/Faculty";
+import Blog from "@/components/Blog";
 const Index = () => {
   const {
     toast
@@ -497,6 +499,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Faculty />
+      <Blog />
 
       {/* FAQ Section */}
       <section id="faq" className="py-20 px-4 bg-background">
