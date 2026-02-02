@@ -271,7 +271,7 @@ const Index = () => {
             }, {
               text: "Liberdade e Flexibilidade"
             }, {
-              text: "Networking alumni"
+              text: "Nota Máxima MEC"
             }, {
               text: "Aulas on demand"
             }, {
@@ -292,7 +292,7 @@ const Index = () => {
             }, {
               text: "Liberdade e Flexibilidade"
             }, {
-              text: "Networking alumni"
+              text: "Nota Máxima MEC"
             }, {
               text: "Aulas on demand"
             }, {
@@ -347,22 +347,24 @@ const Index = () => {
 
             <div className="md:col-span-2 space-y-4">
               <Card className="p-6 hover-scale">
-                <h3 className="font-bold text-lg mb-2">Career Lab</h3>
+                <h3 className="font-bold text-lg mb-2">Aulas Online</h3>
                 <p className="text-sm text-muted-foreground">
-                  Diagnóstico de perfil, construção de plano de carreira e acesso a oportunidades
+                  Estude com flexibilidade de horários e conteúdos disponíveis sob demanda
                 </p>
               </Card>
 
               <Card className="p-6 hover-scale">
-                <h3 className="font-bold text-lg mb-2">Sprints com Empresas</h3>
+                <h3 className="font-bold text-lg mb-2">Conclusão Rápida</h3>
                 <p className="text-sm text-muted-foreground">
-                  Desafios com líderes para solucionar cases reais do mercado
+                  Conclua a pós-graduação a partir de 3 meses e acelere seu currículo
                 </p>
               </Card>
 
               <Card className="p-6 hover-scale">
-                <h3 className="font-bold text-lg mb-2">Comunidade Alumni</h3>
-                <p className="text-sm text-muted-foreground">Ambiente exclusivo para compartilhar vagas e mentorias</p>
+                <h3 className="font-bold text-lg mb-2">Diploma Reconhecido pelo MEC</h3>
+                <p className="text-sm text-muted-foreground">
+                  Certificação oficial com validade nacional para sua especialização
+                </p>
               </Card>
             </div>
           </div>
@@ -455,8 +457,8 @@ const Index = () => {
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-bold text-lg">Acesso ao laboratório de IAs premium</h4>
-                        <p className="text-muted-foreground text-sm">Ferramentas profissionais à sua disposição</p>
+                        <h4 className="font-bold text-lg">Aulas online e conteúdos atualizados</h4>
+                        <p className="text-muted-foreground text-sm">Aprenda no seu ritmo com materiais sempre disponíveis</p>
                       </div>
                     </div>
 
