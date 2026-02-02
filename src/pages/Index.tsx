@@ -159,8 +159,8 @@ const Index = () => {
                   </div>
 
                   <div className="py-4">
-                    <p className="text-muted-foreground text-sm md:text-base mb-2">A partir de 12x de</p>
-                    <p className="mb-2 font-sans font-extrabold text-[#0b1f37] text-6xl md:text-7xl lg:text-8xl">R$66</p>
+                    <p className="text-muted-foreground text-sm md:text-base mb-2">A partir de 18x de</p>
+                    <p className="mb-2 font-sans font-extrabold text-[#0b1f37] text-6xl md:text-7xl lg:text-8xl">R$86</p>
                     <p className="text-muted-foreground text-sm md:text-base">mensais*</p>
                   </div>
 
@@ -472,8 +472,8 @@ const Index = () => {
                   {/* Price Card */}
                   <div className="bg-accent rounded-lg p-4 md:p-6 text-center my-4 md:my-6">
                     <p className="text-[#0d213a] text-xs md:text-sm font-semibold mb-1 md:mb-2">A partir de</p>
-                    <p className="text-[#0d213a] font-extrabold mb-1 md:mb-2 text-4xl md:text-5xl lg:text-6xl">R$ 66/mês</p>
-                    <p className="text-[#0d213a] text-xs md:text-sm font-semibold">Apenas R$ 2,20 por dia</p>
+                    <p className="text-[#0d213a] font-extrabold mb-1 md:mb-2 text-4xl md:text-5xl lg:text-6xl">R$ 86/mês</p>
+                    <p className="text-[#0d213a] text-xs md:text-sm font-semibold">Apenas R$ 2,87 por dia</p>
                   </div>
 
                   {/* Financing Info */}
